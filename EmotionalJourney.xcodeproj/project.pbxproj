@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3E425E71542BD100073C9CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E425E61542BD100073C9CC /* UIKit.framework */; };
+		C3E425E91542BD100073C9CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E425E81542BD100073C9CC /* Foundation.framework */; };
+		C3E425EB1542BD100073C9CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E425EA1542BD100073C9CC /* CoreGraphics.framework */; };
+		C3E425F11542BD100073C9CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3E425EF1542BD100073C9CC /* InfoPlist.strings */; };
+		C3E425F31542BD100073C9CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E425F21542BD100073C9CC /* main.m */; };
+		C3E425F71542BD100073C9CC /* com_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E425F61542BD100073C9CC /* com_AppDelegate.m */; };
+		C3E425FA1542BD100073C9CC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E425F81542BD100073C9CC /* MainStoryboard.storyboard */; };
+		C3E425FD1542BD100073C9CC /* com_FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E425FC1542BD100073C9CC /* com_FirstViewController.m */; };
+		C3E425FF1542BD100073C9CC /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E425FE1542BD100073C9CC /* first.png */; };
+		C3E426011542BD100073C9CC /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E426001542BD100073C9CC /* first@2x.png */; };
+		C3E426041542BD100073C9CC /* com_SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E426031542BD100073C9CC /* com_SecondViewController.m */; };
+		C3E426061542BD100073C9CC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E426051542BD100073C9CC /* second.png */; };
+		C3E426081542BD100073C9CC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E426071542BD100073C9CC /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C3E425E21542BD100073C9CC /* EmotionalJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E425E61542BD100073C9CC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3E425E81542BD100073C9CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3E425EA1542BD100073C9CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3E425EE1542BD100073C9CC /* EmotionalJourney-Info.plist */ = {isa = PBXFileReference; path = "EmotionalJourney-Info.plist"; sourceTree = "<group>"; };
+		C3E425F01542BD100073C9CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3E425F21542BD100073C9CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3E425F41542BD100073C9CC /* EmotionalJourney-Prefix.pch */ = {isa = PBXFileReference; path = "EmotionalJourney-Prefix.pch"; sourceTree = "<group>"; };
+		C3E425F51542BD100073C9CC /* com_AppDelegate.h */ = {isa = PBXFileReference; path = com_AppDelegate.h; sourceTree = "<group>"; };
+		C3E425F61542BD100073C9CC /* com_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_AppDelegate.m; sourceTree = "<group>"; };
+		C3E425F91542BD100073C9CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C3E425FB1542BD100073C9CC /* com_FirstViewController.h */ = {isa = PBXFileReference; path = com_FirstViewController.h; sourceTree = "<group>"; };
+		C3E425FC1542BD100073C9CC /* com_FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_FirstViewController.m; sourceTree = "<group>"; };
+		C3E425FE1542BD100073C9CC /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		C3E426001542BD100073C9CC /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		C3E426021542BD100073C9CC /* com_SecondViewController.h */ = {isa = PBXFileReference; path = com_SecondViewController.h; sourceTree = "<group>"; };
+		C3E426031542BD100073C9CC /* com_SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_SecondViewController.m; sourceTree = "<group>"; };
+		C3E426051542BD100073C9CC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		C3E426071542BD100073C9CC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3E425DF1542BD100073C9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3E425E71542BD100073C9CC /* UIKit.framework in Frameworks */,
+				C3E425E91542BD100073C9CC /* Foundation.framework in Frameworks */,
+				C3E425EB1542BD100073C9CC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3E425D71542BD100073C9CC = {
+			isa = PBXGroup;
+			children = (
+				C3E425EC1542BD100073C9CC /* EmotionalJourney */,
+				C3E425E51542BD100073C9CC /* Frameworks */,
+				C3E425E31542BD100073C9CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3E425E31542BD100073C9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3E425E21542BD100073C9CC /* EmotionalJourney.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3E425E51542BD100073C9CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3E425E61542BD100073C9CC /* UIKit.framework */,
+				C3E425E81542BD100073C9CC /* Foundation.framework */,
+				C3E425EA1542BD100073C9CC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3E425EC1542BD100073C9CC /* EmotionalJourney */ = {
+			isa = PBXGroup;
+			children = (
+				C3E425F51542BD100073C9CC /* com_AppDelegate.h */,
+				C3E425F61542BD100073C9CC /* com_AppDelegate.m */,
+				C3E425F81542BD100073C9CC /* MainStoryboard.storyboard */,
+				C3E425FB1542BD100073C9CC /* com_FirstViewController.h */,
+				C3E425FC1542BD100073C9CC /* com_FirstViewController.m */,
+				C3E425FE1542BD100073C9CC /* first.png */,
+				C3E426001542BD100073C9CC /* first@2x.png */,
+				C3E426021542BD100073C9CC /* com_SecondViewController.h */,
+				C3E426031542BD100073C9CC /* com_SecondViewController.m */,
+				C3E426051542BD100073C9CC /* second.png */,
+				C3E426071542BD100073C9CC /* second@2x.png */,
+				C3E425ED1542BD100073C9CC /* Supporting Files */,
+			);
+			path = EmotionalJourney;
+			sourceTree = "<group>";
+		};
+		C3E425ED1542BD100073C9CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3E425EE1542BD100073C9CC /* EmotionalJourney-Info.plist */,
+				C3E425EF1542BD100073C9CC /* InfoPlist.strings */,
+				C3E425F21542BD100073C9CC /* main.m */,
+				C3E425F41542BD100073C9CC /* EmotionalJourney-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3E425E11542BD100073C9CC /* EmotionalJourney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3E4260B1542BD100073C9CC /* Build configuration list for PBXNativeTarget "EmotionalJourney" */;
+			buildPhases = (
+				C3E425DE1542BD100073C9CC /* Sources */,
+				C3E425DF1542BD100073C9CC /* Frameworks */,
+				C3E425E01542BD100073C9CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmotionalJourney;
+			productName = EmotionalJourney;
+			productReference = C3E425E21542BD100073C9CC /* EmotionalJourney.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3E425D91542BD100073C9CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C3E425DC1542BD100073C9CC /* Build configuration list for PBXProject "EmotionalJourney" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3E425D71542BD100073C9CC;
+			productRefGroup = C3E425E31542BD100073C9CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3E425E11542BD100073C9CC /* EmotionalJourney */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3E425E01542BD100073C9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3E425F11542BD100073C9CC /* InfoPlist.strings in Resources */,
+				C3E425FA1542BD100073C9CC /* MainStoryboard.storyboard in Resources */,
+				C3E425FF1542BD100073C9CC /* first.png in Resources */,
+				C3E426011542BD100073C9CC /* first@2x.png in Resources */,
+				C3E426061542BD100073C9CC /* second.png in Resources */,
+				C3E426081542BD100073C9CC /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3E425DE1542BD100073C9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3E425F31542BD100073C9CC /* main.m in Sources */,
+				C3E425F71542BD100073C9CC /* com_AppDelegate.m in Sources */,
+				C3E425FD1542BD100073C9CC /* com_FirstViewController.m in Sources */,
+				C3E426041542BD100073C9CC /* com_SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3E425EF1542BD100073C9CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3E425F01542BD100073C9CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3E425F81542BD100073C9CC /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3E425F91542BD100073C9CC /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3E426091542BD100073C9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3E4260A1542BD100073C9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3E4260C1542BD100073C9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmotionalJourney/EmotionalJourney-Prefix.pch";
+				INFOPLIST_FILE = "EmotionalJourney/EmotionalJourney-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3E4260D1542BD100073C9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmotionalJourney/EmotionalJourney-Prefix.pch";
+				INFOPLIST_FILE = "EmotionalJourney/EmotionalJourney-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3E425DC1542BD100073C9CC /* Build configuration list for PBXProject "EmotionalJourney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3E426091542BD100073C9CC /* Debug */,
+				C3E4260A1542BD100073C9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3E4260B1542BD100073C9CC /* Build configuration list for PBXNativeTarget "EmotionalJourney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3E4260C1542BD100073C9CC /* Debug */,
+				C3E4260D1542BD100073C9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3E425D91542BD100073C9CC /* Project object */;
+}
