@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C333CC2C1543FC960035E34B /* SmileyHappy.png in Resources */ = {isa = PBXBuildFile; fileRef = C333CC2B1543FC960035E34B /* SmileyHappy.png */; };
+		C333CC2E1543FC9F0035E34B /* SmileySad.png in Resources */ = {isa = PBXBuildFile; fileRef = C333CC2D1543FC9F0035E34B /* SmileySad.png */; };
+		C3B579DD154A64ED005D56D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3B579CD154A64ED005D56D8 /* InfoPlist.strings */; };
+		C3B579E0154A64ED005D56D8 /* timescroll_hourhand.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D2154A64ED005D56D8 /* timescroll_hourhand.png */; };
+		C3B579E1154A64ED005D56D8 /* timescroll_hourhand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D3154A64ED005D56D8 /* timescroll_hourhand@2x.png */; };
+		C3B579E2154A64ED005D56D8 /* timescroll_minutehand.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D4154A64ED005D56D8 /* timescroll_minutehand.png */; };
+		C3B579E3154A64ED005D56D8 /* timescroll_minutehand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D5154A64ED005D56D8 /* timescroll_minutehand@2x.png */; };
+		C3B579E4154A64ED005D56D8 /* timescroll_pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D6154A64ED005D56D8 /* timescroll_pointer.png */; };
+		C3B579E5154A64ED005D56D8 /* timescroll_pointer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D7154A64ED005D56D8 /* timescroll_pointer@2x.png */; };
+		C3B579E6154A64ED005D56D8 /* TimeScroller-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3B579D8154A64ED005D56D8 /* TimeScroller-Info.plist */; };
+		C3CAE732154C4EC00070B4CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B579CC154A64ED005D56D8 /* AppDelegate.m */; };
+		C3CAE733154C4EC50070B4CA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B579D1154A64ED005D56D8 /* RootViewController.m */; };
+		C3CAE734154C4ED50070B4CA /* TimeScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B579DB154A64ED005D56D8 /* TimeScroller.m */; };
+		C3CAE735154C4EF80070B4CA /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FD1D1615458BC100EB2F0B /* Utility.m */; };
+		C3D90697154ACB28009A26D9 /* Background_WovenMatTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D90696154ACB28009A26D9 /* Background_WovenMatTexture.png */; };
+		C3D90699154ACB2E009A26D9 /* ButtonGreen-PenThis.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D90698154ACB2E009A26D9 /* ButtonGreen-PenThis.png */; };
 		C3E425E71542BD100073C9CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E425E61542BD100073C9CC /* UIKit.framework */; };
 		C3E425E91542BD100073C9CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E425E81542BD100073C9CC /* Foundation.framework */; };
 		C3E425EB1542BD100073C9CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E425EA1542BD100073C9CC /* CoreGraphics.framework */; };
@@ -20,28 +36,75 @@
 		C3E426041542BD100073C9CC /* com_SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E426031542BD100073C9CC /* com_SecondViewController.m */; };
 		C3E426061542BD100073C9CC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E426051542BD100073C9CC /* second.png */; };
 		C3E426081542BD100073C9CC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E426071542BD100073C9CC /* second@2x.png */; };
+		C3FBA47D154DB6AE00CC1F76 /* glass.wav in Resources */ = {isa = PBXBuildFile; fileRef = C3FBA47C154DB6AE00CC1F76 /* glass.wav */; };
+		C3FBAA3315455FF6004D2371 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FBAA3215455FF6004D2371 /* libsqlite3.dylib */; };
+		C3FBAA4215456041004D2371 /* DatabaseOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FBAA4115456041004D2371 /* DatabaseOperations.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C3B579C5154A6226005D56D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B579BD154A6226005D56D8 /* TimeScroller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0C86AAF148C638200F81AB3;
+			remoteInfo = TimeScroller;
+		};
+		C3CAE730154C4DBF0070B4CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B579BD154A6226005D56D8 /* TimeScroller.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C86AAE148C638200F81AB3;
+			remoteInfo = TimeScroller;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C333CC2B1543FC960035E34B /* SmileyHappy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SmileyHappy.png; path = "../../../App Design/Emotions/SmileyHappy.png"; sourceTree = "<group>"; };
+		C333CC2D1543FC9F0035E34B /* SmileySad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SmileySad.png; path = "../../../App Design/Emotions/SmileySad.png"; sourceTree = "<group>"; };
+		C3B579BD154A6226005D56D8 /* TimeScroller.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TimeScroller.xcodeproj; path = "../../../Software/andrewroycarter-TimeScroller-e30a407/TimeScroller.xcodeproj"; sourceTree = "<group>"; };
+		C3B579CB154A64ED005D56D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C3B579CC154A64ED005D56D8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C3B579CE154A64ED005D56D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3B579CF154A64ED005D56D8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3B579D0154A64ED005D56D8 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C3B579D1154A64ED005D56D8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C3B579D2154A64ED005D56D8 /* timescroll_hourhand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timescroll_hourhand.png; sourceTree = "<group>"; };
+		C3B579D3154A64ED005D56D8 /* timescroll_hourhand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timescroll_hourhand@2x.png"; sourceTree = "<group>"; };
+		C3B579D4154A64ED005D56D8 /* timescroll_minutehand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timescroll_minutehand.png; sourceTree = "<group>"; };
+		C3B579D5154A64ED005D56D8 /* timescroll_minutehand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timescroll_minutehand@2x.png"; sourceTree = "<group>"; };
+		C3B579D6154A64ED005D56D8 /* timescroll_pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timescroll_pointer.png; sourceTree = "<group>"; };
+		C3B579D7154A64ED005D56D8 /* timescroll_pointer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timescroll_pointer@2x.png"; sourceTree = "<group>"; };
+		C3B579D8154A64ED005D56D8 /* TimeScroller-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TimeScroller-Info.plist"; sourceTree = "<group>"; };
+		C3B579D9154A64ED005D56D8 /* TimeScroller-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TimeScroller-Prefix.pch"; sourceTree = "<group>"; };
+		C3B579DA154A64ED005D56D8 /* TimeScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeScroller.h; sourceTree = "<group>"; };
+		C3B579DB154A64ED005D56D8 /* TimeScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeScroller.m; sourceTree = "<group>"; };
+		C3D90696154ACB28009A26D9 /* Background_WovenMatTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_WovenMatTexture.png; path = "../../../App Design/MyCreation/Background/Background_WovenMatTexture.png"; sourceTree = "<group>"; };
+		C3D90698154ACB2E009A26D9 /* ButtonGreen-PenThis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonGreen-PenThis.png"; path = "../../../App Design/MyCreation/Buttons/ButtonGreen-PenThis.png"; sourceTree = "<group>"; };
 		C3E425E21542BD100073C9CC /* EmotionalJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E425E61542BD100073C9CC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3E425E81542BD100073C9CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3E425EA1542BD100073C9CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C3E425EE1542BD100073C9CC /* EmotionalJourney-Info.plist */ = {isa = PBXFileReference; path = "EmotionalJourney-Info.plist"; sourceTree = "<group>"; };
+		C3E425EE1542BD100073C9CC /* EmotionalJourney-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmotionalJourney-Info.plist"; sourceTree = "<group>"; };
 		C3E425F01542BD100073C9CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3E425F21542BD100073C9CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C3E425F41542BD100073C9CC /* EmotionalJourney-Prefix.pch */ = {isa = PBXFileReference; path = "EmotionalJourney-Prefix.pch"; sourceTree = "<group>"; };
-		C3E425F51542BD100073C9CC /* com_AppDelegate.h */ = {isa = PBXFileReference; path = com_AppDelegate.h; sourceTree = "<group>"; };
+		C3E425F41542BD100073C9CC /* EmotionalJourney-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmotionalJourney-Prefix.pch"; sourceTree = "<group>"; };
+		C3E425F51542BD100073C9CC /* com_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = com_AppDelegate.h; sourceTree = "<group>"; };
 		C3E425F61542BD100073C9CC /* com_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_AppDelegate.m; sourceTree = "<group>"; };
 		C3E425F91542BD100073C9CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C3E425FB1542BD100073C9CC /* com_FirstViewController.h */ = {isa = PBXFileReference; path = com_FirstViewController.h; sourceTree = "<group>"; };
+		C3E425FB1542BD100073C9CC /* com_FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = com_FirstViewController.h; sourceTree = "<group>"; };
 		C3E425FC1542BD100073C9CC /* com_FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_FirstViewController.m; sourceTree = "<group>"; };
 		C3E425FE1542BD100073C9CC /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		C3E426001542BD100073C9CC /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		C3E426021542BD100073C9CC /* com_SecondViewController.h */ = {isa = PBXFileReference; path = com_SecondViewController.h; sourceTree = "<group>"; };
+		C3E426021542BD100073C9CC /* com_SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = com_SecondViewController.h; sourceTree = "<group>"; };
 		C3E426031542BD100073C9CC /* com_SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_SecondViewController.m; sourceTree = "<group>"; };
 		C3E426051542BD100073C9CC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		C3E426071542BD100073C9CC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C3FBA47C154DB6AE00CC1F76 /* glass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = glass.wav; path = "../../App Design/glass.wav"; sourceTree = "<group>"; };
+		C3FBAA3215455FF6004D2371 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		C3FBAA4015456041004D2371 /* DatabaseOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseOperations.h; sourceTree = "<group>"; };
+		C3FBAA4115456041004D2371 /* DatabaseOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseOperations.m; sourceTree = "<group>"; };
+		C3FD1D1515458BC100EB2F0B /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		C3FD1D1615458BC100EB2F0B /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FBAA3315455FF6004D2371 /* libsqlite3.dylib in Frameworks */,
 				C3E425E71542BD100073C9CC /* UIKit.framework in Frameworks */,
 				C3E425E91542BD100073C9CC /* Foundation.framework in Frameworks */,
 				C3E425EB1542BD100073C9CC /* CoreGraphics.framework in Frameworks */,
@@ -58,9 +122,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3B579BE154A6226005D56D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3B579C6154A6226005D56D8 /* TimeScroller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3B579CA154A64ED005D56D8 /* TimerScroller */ = {
+			isa = PBXGroup;
+			children = (
+				C3B579CB154A64ED005D56D8 /* AppDelegate.h */,
+				C3B579CC154A64ED005D56D8 /* AppDelegate.m */,
+				C3B579CD154A64ED005D56D8 /* InfoPlist.strings */,
+				C3B579CF154A64ED005D56D8 /* main.m */,
+				C3B579D0154A64ED005D56D8 /* RootViewController.h */,
+				C3B579D1154A64ED005D56D8 /* RootViewController.m */,
+				C3B579D2154A64ED005D56D8 /* timescroll_hourhand.png */,
+				C3B579D3154A64ED005D56D8 /* timescroll_hourhand@2x.png */,
+				C3B579D4154A64ED005D56D8 /* timescroll_minutehand.png */,
+				C3B579D5154A64ED005D56D8 /* timescroll_minutehand@2x.png */,
+				C3B579D6154A64ED005D56D8 /* timescroll_pointer.png */,
+				C3B579D7154A64ED005D56D8 /* timescroll_pointer@2x.png */,
+				C3B579D8154A64ED005D56D8 /* TimeScroller-Info.plist */,
+				C3B579D9154A64ED005D56D8 /* TimeScroller-Prefix.pch */,
+				C3B579DA154A64ED005D56D8 /* TimeScroller.h */,
+				C3B579DB154A64ED005D56D8 /* TimeScroller.m */,
+			);
+			name = TimerScroller;
+			path = "../../../Software/andrewroycarter-TimeScroller-e30a407/TimerScroller";
+			sourceTree = "<group>";
+		};
+		C3D9069A154ACB3A009A26D9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C3D90696154ACB28009A26D9 /* Background_WovenMatTexture.png */,
+				C3D90698154ACB2E009A26D9 /* ButtonGreen-PenThis.png */,
+				C333CC2B1543FC960035E34B /* SmileyHappy.png */,
+				C333CC2D1543FC9F0035E34B /* SmileySad.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		C3E425D71542BD100073C9CC = {
 			isa = PBXGroup;
 			children = (
+				C3FBA47C154DB6AE00CC1F76 /* glass.wav */,
+				C3FBAA3215455FF6004D2371 /* libsqlite3.dylib */,
 				C3E425EC1542BD100073C9CC /* EmotionalJourney */,
 				C3E425E51542BD100073C9CC /* Frameworks */,
 				C3E425E31542BD100073C9CC /* Products */,
@@ -88,6 +197,9 @@
 		C3E425EC1542BD100073C9CC /* EmotionalJourney */ = {
 			isa = PBXGroup;
 			children = (
+				C3D9069A154ACB3A009A26D9 /* images */,
+				C3B579CA154A64ED005D56D8 /* TimerScroller */,
+				C3B579BD154A6226005D56D8 /* TimeScroller.xcodeproj */,
 				C3E425F51542BD100073C9CC /* com_AppDelegate.h */,
 				C3E425F61542BD100073C9CC /* com_AppDelegate.m */,
 				C3E425F81542BD100073C9CC /* MainStoryboard.storyboard */,
@@ -100,6 +212,10 @@
 				C3E426051542BD100073C9CC /* second.png */,
 				C3E426071542BD100073C9CC /* second@2x.png */,
 				C3E425ED1542BD100073C9CC /* Supporting Files */,
+				C3FBAA4015456041004D2371 /* DatabaseOperations.h */,
+				C3FBAA4115456041004D2371 /* DatabaseOperations.m */,
+				C3FD1D1515458BC100EB2F0B /* Utility.h */,
+				C3FD1D1615458BC100EB2F0B /* Utility.m */,
 			);
 			path = EmotionalJourney;
 			sourceTree = "<group>";
@@ -129,6 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C3CAE731154C4DBF0070B4CA /* PBXTargetDependency */,
 			);
 			name = EmotionalJourney;
 			productName = EmotionalJourney;
@@ -153,12 +270,28 @@
 			mainGroup = C3E425D71542BD100073C9CC;
 			productRefGroup = C3E425E31542BD100073C9CC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C3B579BE154A6226005D56D8 /* Products */;
+					ProjectRef = C3B579BD154A6226005D56D8 /* TimeScroller.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C3E425E11542BD100073C9CC /* EmotionalJourney */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C3B579C6154A6226005D56D8 /* TimeScroller.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TimeScroller.app;
+			remoteRef = C3B579C5154A6226005D56D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C3E425E01542BD100073C9CC /* Resources */ = {
@@ -171,6 +304,19 @@
 				C3E426011542BD100073C9CC /* first@2x.png in Resources */,
 				C3E426061542BD100073C9CC /* second.png in Resources */,
 				C3E426081542BD100073C9CC /* second@2x.png in Resources */,
+				C333CC2C1543FC960035E34B /* SmileyHappy.png in Resources */,
+				C333CC2E1543FC9F0035E34B /* SmileySad.png in Resources */,
+				C3B579DD154A64ED005D56D8 /* InfoPlist.strings in Resources */,
+				C3B579E0154A64ED005D56D8 /* timescroll_hourhand.png in Resources */,
+				C3B579E1154A64ED005D56D8 /* timescroll_hourhand@2x.png in Resources */,
+				C3B579E2154A64ED005D56D8 /* timescroll_minutehand.png in Resources */,
+				C3B579E3154A64ED005D56D8 /* timescroll_minutehand@2x.png in Resources */,
+				C3B579E4154A64ED005D56D8 /* timescroll_pointer.png in Resources */,
+				C3B579E5154A64ED005D56D8 /* timescroll_pointer@2x.png in Resources */,
+				C3B579E6154A64ED005D56D8 /* TimeScroller-Info.plist in Resources */,
+				C3D90697154ACB28009A26D9 /* Background_WovenMatTexture.png in Resources */,
+				C3D90699154ACB2E009A26D9 /* ButtonGreen-PenThis.png in Resources */,
+				C3FBA47D154DB6AE00CC1F76 /* glass.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,16 +327,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CAE735154C4EF80070B4CA /* Utility.m in Sources */,
+				C3CAE734154C4ED50070B4CA /* TimeScroller.m in Sources */,
+				C3CAE733154C4EC50070B4CA /* RootViewController.m in Sources */,
+				C3CAE732154C4EC00070B4CA /* AppDelegate.m in Sources */,
 				C3E425F31542BD100073C9CC /* main.m in Sources */,
 				C3E425F71542BD100073C9CC /* com_AppDelegate.m in Sources */,
 				C3E425FD1542BD100073C9CC /* com_FirstViewController.m in Sources */,
 				C3E426041542BD100073C9CC /* com_SecondViewController.m in Sources */,
+				C3FBAA4215456041004D2371 /* DatabaseOperations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C3CAE731154C4DBF0070B4CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TimeScroller;
+			targetProxy = C3CAE730154C4DBF0070B4CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C3B579CD154A64ED005D56D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3B579CE154A64ED005D56D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		C3E425EF1542BD100073C9CC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -231,7 +398,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
+				WARNING_LDFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -250,8 +419,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				WARNING_LDFLAGS = "";
 			};
 			name = Release;
 		};
@@ -261,6 +432,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EmotionalJourney/EmotionalJourney-Prefix.pch";
 				INFOPLIST_FILE = "EmotionalJourney/EmotionalJourney-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -272,6 +444,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EmotionalJourney/EmotionalJourney-Prefix.pch";
 				INFOPLIST_FILE = "EmotionalJourney/EmotionalJourney-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,6 +469,7 @@
 				C3E4260D1542BD100073C9CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
