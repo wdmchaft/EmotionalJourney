@@ -118,6 +118,9 @@ UILocalNotification *notification;
 }
 
 
+/**
+ * Adds the user input to a dictionary
+ */
 -(void) addToInputArray: (NSString *)userInput {
     
     NSDate *now = [NSDate date];
