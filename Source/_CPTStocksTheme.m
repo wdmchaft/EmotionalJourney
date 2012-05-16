@@ -40,8 +40,9 @@ NSString *const kCPTStocksTheme = @"Stocks"; ///< Stocks theme.
 
 -(void)applyThemeToPlotArea:(CPTPlotAreaFrame *)plotAreaFrame
 {
-	CPTGradient *stocksBackgroundGradient = [[[CPTGradient alloc] init] autorelease];
-
+	// CPTGradient *stocksBackgroundGradient = [[[CPTGradient alloc] init] autorelease];
+    CPTGradient *stocksBackgroundGradient = [[CPTGradient alloc] init];
+    
 	stocksBackgroundGradient	   = [stocksBackgroundGradient addColorStop:[CPTColor colorWithComponentRed:0.21569 green:0.28627 blue:0.44706 alpha:1.0] atPosition:0.0];
 	stocksBackgroundGradient	   = [stocksBackgroundGradient addColorStop:[CPTColor colorWithComponentRed:0.09412 green:0.17255 blue:0.36078 alpha:1.0] atPosition:0.5];
 	stocksBackgroundGradient	   = [stocksBackgroundGradient addColorStop:[CPTColor colorWithComponentRed:0.05882 green:0.13333 blue:0.33333 alpha:1.0] atPosition:0.5];
@@ -70,10 +71,12 @@ NSString *const kCPTStocksTheme = @"Stocks"; ///< Stocks theme.
 	minorLineStyle.lineWidth = 3.0;
 
 	CPTXYAxis *x						= axisSet.xAxis;
-	CPTMutableTextStyle *whiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	// CPTMutableTextStyle *whiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+    CPTMutableTextStyle *whiteTextStyle = [[CPTMutableTextStyle alloc] init];
 	whiteTextStyle.color	= [CPTColor whiteColor];
 	whiteTextStyle.fontSize = 14.0;
-	CPTMutableTextStyle *minorTickWhiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	// CPTMutableTextStyle *minorTickWhiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+    CPTMutableTextStyle *minorTickWhiteTextStyle = [[CPTMutableTextStyle alloc] init];
 	minorTickWhiteTextStyle.color	 = [CPTColor whiteColor];
 	minorTickWhiteTextStyle.fontSize = 12.0;
 	x.labelingPolicy				 = CPTAxisLabelingPolicyFixedInterval;

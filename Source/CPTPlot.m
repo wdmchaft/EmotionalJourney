@@ -255,21 +255,33 @@
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTPlot *theLayer = (CPTPlot *)layer;
 
-		cachedData			 = [theLayer->cachedData retain];
+		// cachedData			 = [theLayer->cachedData retain];
+        cachedData			 = theLayer->cachedData;
 		cachedDataCount		 = theLayer->cachedDataCount;
 		cachePrecision		 = theLayer->cachePrecision;
 		dataSource			 = theLayer->dataSource;
-		title				 = [theLayer->title retain];
-		plotSpace			 = [theLayer->plotSpace retain];
+        
+		// title				 = [theLayer->title retain];
+		// plotSpace			 = [theLayer->plotSpace retain];
+        
+        title				 = theLayer->title;
+		plotSpace			 = theLayer->plotSpace;
+        
 		dataNeedsReloading	 = theLayer->dataNeedsReloading;
 		needsRelabel		 = theLayer->needsRelabel;
 		labelOffset			 = theLayer->labelOffset;
 		labelRotation		 = theLayer->labelRotation;
 		labelField			 = theLayer->labelField;
-		labelTextStyle		 = [theLayer->labelTextStyle retain];
-		labelFormatter		 = [theLayer->labelFormatter retain];
-		labelShadow			 = [theLayer->labelShadow retain];
-		labelIndexRange		 = theLayer->labelIndexRange;
+		
+        //labelTextStyle		 = [theLayer->labelTextStyle retain];
+		//labelFormatter		 = [theLayer->labelFormatter retain];
+		//labelShadow			 = [theLayer->labelShadow retain];
+		
+        labelTextStyle		 = theLayer->labelTextStyle;
+        labelFormatter		 = theLayer->labelFormatter;
+        labelShadow			 = theLayer->labelShadow;
+        
+        labelIndexRange		 = theLayer->labelIndexRange;
 		labelAnnotations	 = [theLayer->labelAnnotations retain];
 		alignsPointsToPixels = theLayer->alignsPointsToPixels;
 	}

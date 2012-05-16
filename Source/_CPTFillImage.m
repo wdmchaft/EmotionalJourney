@@ -33,15 +33,16 @@
 -(id)initWithImage:(CPTImage *)anImage
 {
 	if ( (self = [super init]) ) {
-		fillImage = [anImage retain];
+		// fillImage = [anImage retain];
+        fillImage = anImage;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[fillImage release];
-	[super dealloc];
+	//[fillImage release];
+	//[super dealloc];
 }
 
 #pragma mark -
@@ -98,7 +99,8 @@
 -(id)initWithCoder:(NSCoder *)coder
 {
 	if ( (self = [super init]) ) {
-		fillImage = [[coder decodeObjectForKey:@"_CPTFillImage.fillImage"] retain];
+		// fillImage = [[coder decodeObjectForKey:@"_CPTFillImage.fillImage"] retain];
+        fillImage = [coder decodeObjectForKey:@"_CPTFillImage.fillImage"];
 	}
 	return self;
 }

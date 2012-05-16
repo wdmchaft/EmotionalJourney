@@ -167,7 +167,7 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 	barLineStyle.lineWidth = 1.0;
 	barLineStyle.lineColor = [CPTColor blackColor];
 	barPlot.lineStyle	   = barLineStyle;
-	[barLineStyle release];
+	// [barLineStyle release];
 	barPlot.barsAreHorizontal			  = horizontal;
 	barPlot.barWidth					  = CPTDecimalFromDouble(0.8);
 	barPlot.barWidthsAreInViewCoordinates = NO;
@@ -175,7 +175,8 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 	CPTGradient *fillGradient = [CPTGradient gradientWithBeginningColor:color endingColor:[CPTColor blackColor]];
 	fillGradient.angle = (horizontal ? -90.0 : 0.0);
 	barPlot.fill	   = [CPTFill fillWithGradient:fillGradient];
-	return [barPlot autorelease];
+	// return [barPlot autorelease];
+    return barPlot;
 }
 
 #pragma mark -
@@ -222,7 +223,7 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 {
 	if ( (self = [super initWithFrame:newFrame]) ) {
 		lineStyle					  = [[CPTLineStyle alloc] init];
-		fill						  = [[CPTFill fillWithColor:[CPTColor blackColor]] retain];
+		fill						  = [CPTFill fillWithColor:[CPTColor blackColor]];
 		barWidth					  = CPTDecimalFromDouble(0.5);
 		barWidthScale				  = 1.0;
 		barWidthsAreInViewCoordinates = NO;
@@ -247,8 +248,8 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTBarPlot *theLayer = (CPTBarPlot *)layer;
 
-		lineStyle					  = [theLayer->lineStyle retain];
-		fill						  = [theLayer->fill retain];
+		lineStyle					  = theLayer->lineStyle;
+		fill						  = theLayer->fill;
 		barWidth					  = theLayer->barWidth;
 		barWidthScale				  = theLayer->barWidthScale;
 		barWidthsAreInViewCoordinates = theLayer->barWidthsAreInViewCoordinates;
@@ -258,17 +259,17 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 		baseValue					  = theLayer->baseValue;
 		barBasesVary				  = theLayer->barBasesVary;
 		barsAreHorizontal			  = theLayer->barsAreHorizontal;
-		plotRange					  = [theLayer->plotRange retain];
+		plotRange					  = theLayer->plotRange;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[lineStyle release];
-	[fill release];
-	[plotRange release];
-	[super dealloc];
+	// [lineStyle release];
+	// [fill release];
+	// [plotRange release];
+	// [super dealloc];
 }
 
 -(void)encodeWithCoder:(NSCoder *)coder
@@ -377,7 +378,7 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 			}
 		}
 		[self cacheNumbers:locationData forField:CPTBarPlotFieldBarLocation atRecordIndex:indexRange.location];
-		[locationData release];
+		// [locationData release];
 	}
 	else if ( self.dataSource ) {
 		// Get locations from the datasource
@@ -417,7 +418,7 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 			}
 		}
 		[self cacheNumbers:locationData forField:CPTBarPlotFieldBarLocation atRecordIndex:indexRange.location];
-		[locationData release];
+		// [locationData release];
 	}
 
 	// Legend
@@ -558,7 +559,8 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 				if ( self.barsAreHorizontal ) {
 					NSDecimal base = self.baseValue;
 					if ( ![range contains:base] ) {
-						CPTMutablePlotRange *newRange = [[range mutableCopy] autorelease];
+						// CPTMutablePlotRange *newRange = [[range mutableCopy] autorelease];
+                        CPTMutablePlotRange *newRange = [range mutableCopy];
 						[newRange unionPlotRange:[CPTPlotRange plotRangeWithLocation:base length:CPTDecimalFromInteger(0)]];
 						range = newRange;
 					}
@@ -569,8 +571,9 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 				if ( !self.barsAreHorizontal ) {
 					NSDecimal base = self.baseValue;
 					if ( ![range contains:base] ) {
-						CPTMutablePlotRange *newRange = [[range mutableCopy] autorelease];
-						[newRange unionPlotRange:[CPTPlotRange plotRangeWithLocation:base length:CPTDecimalFromInteger(0)]];
+						// CPTMutablePlotRange *newRange = [[range mutableCopy] autorelease];
+						CPTMutablePlotRange *newRange = [range mutableCopy];
+                        [newRange unionPlotRange:[CPTPlotRange plotRangeWithLocation:base length:CPTDecimalFromInteger(0)]];
 						range = newRange;
 					}
 				}
@@ -1156,7 +1159,7 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 -(void)setLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( lineStyle != newLineStyle ) {
-		[lineStyle release];
+		// [lineStyle release];
 		lineStyle = [newLineStyle copy];
 		[self setNeedsDisplay];
 		[[NSNotificationCenter defaultCenter] postNotificationName:CPTLegendNeedsRedrawForPlotNotification object:self];
@@ -1166,7 +1169,7 @@ NSString *const CPTBarPlotBindingBarBases	  = @"barBases";     ///< Bar bases.
 -(void)setFill:(CPTFill *)newFill
 {
 	if ( fill != newFill ) {
-		[fill release];
+		// [fill release];
 		fill = [newFill copy];
 		[self setNeedsDisplay];
 		[[NSNotificationCenter defaultCenter] postNotificationName:CPTLegendNeedsRedrawForPlotNotification object:self];

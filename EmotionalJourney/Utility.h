@@ -11,7 +11,8 @@
 @interface Utility : NSObject
 
 +(int) getDateAsInt: (NSDate *) inputDate;
-
 +(NSDate *) getIntAsDate: (int) intDate;
++(NSString *) getIntAsString: (int) integer;
++(NSString *) concatenateStringsInArray: (NSArray *) stringArray;
 
 @end

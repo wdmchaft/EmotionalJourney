@@ -202,18 +202,20 @@ static const CGFloat colorLookupTable[10][3] =
 		startAngle		= theLayer->startAngle;
 		sliceDirection	= theLayer->sliceDirection;
 		centerAnchor	= theLayer->centerAnchor;
-		borderLineStyle = [theLayer->borderLineStyle retain];
-		overlayFill		= [theLayer->overlayFill retain];
+		//borderLineStyle = [theLayer->borderLineStyle retain];
+		//overlayFill		= [theLayer->overlayFill retain];
+        borderLineStyle = theLayer->borderLineStyle;
+		overlayFill		= theLayer->overlayFill;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[borderLineStyle release];
-	[overlayFill release];
+	//[borderLineStyle release];
+	//[overlayFill release];
 
-	[super dealloc];
+	//[super dealloc];
 }
 
 -(void)encodeWithCoder:(NSCoder *)coder
@@ -335,8 +337,8 @@ static const CGFloat colorLookupTable[10][3] =
 			}
 			[self cacheNumbers:normalizedSliceValues forField:CPTPieChartFieldSliceWidthNormalized];
 			[self cacheNumbers:cumulativeSliceValues forField:CPTPieChartFieldSliceWidthSum];
-			[normalizedSliceValues release];
-			[cumulativeSliceValues release];
+			//[normalizedSliceValues release];
+			//[cumulativeSliceValues release];
 		}
 		else {
 			NSDecimal valueSum		   = CPTDecimalFromInteger(0);
@@ -375,8 +377,8 @@ static const CGFloat colorLookupTable[10][3] =
 			}
 			[self cacheNumbers:normalizedSliceValues forField:CPTPieChartFieldSliceWidthNormalized];
 			[self cacheNumbers:cumulativeSliceValues forField:CPTPieChartFieldSliceWidthSum];
-			[normalizedSliceValues release];
-			[cumulativeSliceValues release];
+			//[normalizedSliceValues release];
+			//[cumulativeSliceValues release];
 		}
 	}
 	else {
@@ -691,8 +693,8 @@ static const CGFloat colorLookupTable[10][3] =
 		NSDecimalNumber *xValue = [[NSDecimalNumber alloc] initWithDecimal:plotPoint[CPTCoordinateX]];
 		NSDecimalNumber *yValue = [[NSDecimalNumber alloc] initWithDecimal:plotPoint[CPTCoordinateY]];
 		label.anchorPlotPoint = [NSArray arrayWithObjects:xValue, yValue, nil];
-		[xValue release];
-		[yValue release];
+		//[xValue release];
+		//[yValue release];
 
 		double currentWidth = [self cachedDoubleForField:CPTPieChartFieldSliceWidthNormalized recordIndex:index];
 		if ( isnan(currentWidth) ) {

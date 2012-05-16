@@ -33,16 +33,17 @@
 -(id)initWithGradient:(CPTGradient *)aGradient
 {
 	if ( (self = [super init]) ) {
-		fillGradient = [aGradient retain];
+		// fillGradient = [aGradient retain];
+        fillGradient = aGradient;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[fillGradient release];
+	// [fillGradient release];
 
-	[super dealloc];
+	// [super dealloc];
 }
 
 #pragma mark -
@@ -93,7 +94,8 @@
 -(id)initWithCoder:(NSCoder *)coder
 {
 	if ( (self = [super init]) ) {
-		fillGradient = [[coder decodeObjectForKey:@"_CPTFillGradient.fillGradient"] retain];
+		// fillGradient = [[coder decodeObjectForKey:@"_CPTFillGradient.fillGradient"] retain];
+        fillGradient = [coder decodeObjectForKey:@"_CPTFillGradient.fillGradient"];
 	}
 	return self;
 }

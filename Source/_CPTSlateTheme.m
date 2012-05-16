@@ -100,11 +100,11 @@ NSString *const kCPTSlateTheme = @"Slate"; ///< Slate theme.
 	minorLineStyle.lineColor = [CPTColor blackColor];
 	minorLineStyle.lineWidth = 1.0;
 
-	CPTMutableTextStyle *blackTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	CPTMutableTextStyle *blackTextStyle = [[CPTMutableTextStyle alloc] init];
 	blackTextStyle.color	= [CPTColor blackColor];
 	blackTextStyle.fontSize = 14.0;
 
-	CPTMutableTextStyle *minorTickBlackTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	CPTMutableTextStyle *minorTickBlackTextStyle = [[CPTMutableTextStyle alloc] init];
 	minorTickBlackTextStyle.color	 = [CPTColor blackColor];
 	minorTickBlackTextStyle.fontSize = 12.0;
 

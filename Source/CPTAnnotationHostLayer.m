@@ -57,15 +57,16 @@
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTAnnotationHostLayer *theLayer = (CPTAnnotationHostLayer *)layer;
 
-		mutableAnnotations = [theLayer->mutableAnnotations retain];
+		// mutableAnnotations = [theLayer->mutableAnnotations retain];
+        mutableAnnotations = theLayer->mutableAnnotations;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[mutableAnnotations release];
-	[super dealloc];
+	//[mutableAnnotations release];
+	//[super dealloc];
 }
 
 #pragma mark -
@@ -91,7 +92,8 @@
 
 -(NSArray *)annotations
 {
-	return [[self.mutableAnnotations copy] autorelease];
+	// return [[self.mutableAnnotations copy] autorelease];
+    return [self.mutableAnnotations copy];
 }
 
 /**

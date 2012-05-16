@@ -74,7 +74,8 @@
  **/
 +(id)lineStyle
 {
-	return [[[self alloc] init] autorelease];
+	// return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 -(id)init
@@ -93,9 +94,9 @@
 
 -(void)dealloc
 {
-	[lineColor release];
-	[dashPattern release];
-	[super dealloc];
+	// [lineColor release];
+	// [dashPattern release];
+	// [super dealloc];
 }
 
 #pragma mark -
@@ -119,9 +120,11 @@
 		lineJoin	 = [coder decodeIntegerForKey:@"CPTLineStyle.lineJoin"];
 		miterLimit	 = [coder decodeCGFloatForKey:@"CPTLineStyle.miterLimit"];
 		lineWidth	 = [coder decodeCGFloatForKey:@"CPTLineStyle.lineWidth"];
-		dashPattern	 = [[coder decodeObjectForKey:@"CPTLineStyle.dashPattern"] retain];
+		// dashPattern	 = [[coder decodeObjectForKey:@"CPTLineStyle.dashPattern"] retain];
+        dashPattern	 = [coder decodeObjectForKey:@"CPTLineStyle.dashPattern"];
 		patternPhase = [coder decodeCGFloatForKey:@"CPTLineStyle.patternPhase"];
-		lineColor	 = [[coder decodeObjectForKey:@"CPTLineStyle.lineColor"] retain];
+		// lineColor	 = [[coder decodeObjectForKey:@"CPTLineStyle.lineColor"] retain];
+        lineColor	 = [coder decodeObjectForKey:@"CPTLineStyle.lineColor"];
 	}
 	return self;
 }

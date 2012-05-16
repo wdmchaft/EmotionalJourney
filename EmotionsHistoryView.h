@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
 
-@interface EmotionsHistoryView : UIViewController
+@interface EmotionsHistoryView : CPTGraphHostingView <CPTPlotDataSource> {
+    CPTXYGraph *graph;
+    CPTPieChart *pieChart;
+}
+
+@property (nonatomic, retain) CPTXYGraph *graph;
+
+-(void) initializeGraph;
+-(void) initializePieChart;
+-(void) setMoodHistoryData:(NSArray *)moodHistory;
+-(NSString *) getMoodRatioForMood: (int)moodType;
 
 @end

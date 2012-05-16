@@ -34,7 +34,7 @@
 	newDateFormatter.timeStyle = NSDateFormatterMediumStyle;
 
 	self = [self initWithDateFormatter:newDateFormatter];
-	[newDateFormatter release];
+	// [newDateFormatter release];
 
 	return self;
 }
@@ -46,7 +46,8 @@
 -(id)initWithDateFormatter:(NSDateFormatter *)aDateFormatter
 {
 	if ( (self = [super init]) ) {
-		dateFormatter = [aDateFormatter retain];
+		// dateFormatter = [aDateFormatter retain];
+        dateFormatter = aDateFormatter;
 		referenceDate = nil;
 	}
 	return self;
@@ -54,9 +55,9 @@
 
 -(void)dealloc
 {
-	[referenceDate release];
-	[dateFormatter release];
-	[super dealloc];
+	//[referenceDate release];
+	//[dateFormatter release];
+	//[super dealloc];
 }
 
 #pragma mark -
@@ -73,7 +74,8 @@
 -(id)initWithCoder:(NSCoder *)coder
 {
 	if ( (self = [super initWithCoder:coder]) ) {
-		dateFormatter = [[coder decodeObjectForKey:@"CPTTimeFormatter.dateFormatter"] retain];
+		// dateFormatter = [[coder decodeObjectForKey:@"CPTTimeFormatter.dateFormatter"] retain];
+        dateFormatter = [coder decodeObjectForKey:@"CPTTimeFormatter.dateFormatter"];
 		referenceDate = [[coder decodeObjectForKey:@"CPTTimeFormatter.referenceDate"] copy];
 	}
 	return self;
@@ -118,7 +120,7 @@
 		date = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:[coordinateValue doubleValue]];
 	}
 	NSString *string = [self.dateFormatter stringFromDate:date];
-	[date release];
+	// [date release];
 	return string;
 }
 

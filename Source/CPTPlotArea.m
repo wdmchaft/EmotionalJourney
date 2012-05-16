@@ -150,7 +150,7 @@ static const int kCPTNumberOfLayers = 6; // number of primary layers to arrange
 
 		CPTPlotGroup *newPlotGroup = [(CPTPlotGroup *)[CPTPlotGroup alloc] initWithFrame:newFrame];
 		self.plotGroup = newPlotGroup;
-		[newPlotGroup release];
+		// [newPlotGroup release];
 
 		self.needsDisplayOnBoundsChange = YES;
 	}
@@ -164,33 +164,43 @@ static const int kCPTNumberOfLayers = 6; // number of primary layers to arrange
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTPlotArea *theLayer = (CPTPlotArea *)layer;
 
-		minorGridLineGroup = [theLayer->minorGridLineGroup retain];
-		majorGridLineGroup = [theLayer->majorGridLineGroup retain];
-		axisSet			   = [theLayer->axisSet retain];
-		plotGroup		   = [theLayer->plotGroup retain];
-		axisLabelGroup	   = [theLayer->axisLabelGroup retain];
-		axisTitleGroup	   = [theLayer->axisTitleGroup retain];
-		fill			   = [theLayer->fill retain];
-		topDownLayerOrder  = [theLayer->topDownLayerOrder retain];
-		bottomUpLayerOrder = malloc( kCPTNumberOfLayers * sizeof(CPTGraphLayerType) );
+		minorGridLineGroup = theLayer->minorGridLineGroup;
+		majorGridLineGroup = theLayer->majorGridLineGroup;
+		axisSet			   = theLayer->axisSet;
+		plotGroup		   = theLayer->plotGroup;
+		axisLabelGroup	   = theLayer->axisLabelGroup;
+		axisTitleGroup	   = theLayer->axisTitleGroup;
+		fill			   = theLayer->fill;
+		topDownLayerOrder  = theLayer->topDownLayerOrder;
+		
+        minorGridLineGroup = theLayer->minorGridLineGroup;
+		majorGridLineGroup = theLayer->majorGridLineGroup;
+		axisSet			   = theLayer->axisSet;
+		plotGroup		   = theLayer->plotGroup;
+		axisLabelGroup	   = theLayer->axisLabelGroup;
+		axisTitleGroup	   = theLayer->axisTitleGroup;
+		fill			   = theLayer->fill;
+		topDownLayerOrder  = theLayer->topDownLayerOrder;
+        
+        bottomUpLayerOrder = malloc( kCPTNumberOfLayers * sizeof(CPTGraphLayerType) );
 		memcpy( bottomUpLayerOrder, theLayer->bottomUpLayerOrder, kCPTNumberOfLayers * sizeof(CPTGraphLayerType) );
 	}
 	return self;
 }
 
--(void)dealloc
-{
-	[minorGridLineGroup release];
-	[majorGridLineGroup release];
-	[axisSet release];
-	[plotGroup release];
-	[axisLabelGroup release];
-	[axisTitleGroup release];
-	[fill release];
-	[topDownLayerOrder release];
-	free(bottomUpLayerOrder);
+-(void)dealloc {
+	//[minorGridLineGroup release];
+	//[majorGridLineGroup release];
+	//[axisSet release];
+	//[plotGroup release];
+	//[axisLabelGroup release];
+	//[axisTitleGroup release];
+	//[fill release];
+	//[topDownLayerOrder release];
+	
+    free(bottomUpLayerOrder);
 
-	[super dealloc];
+	//[super dealloc];
 }
 
 -(void)finalize

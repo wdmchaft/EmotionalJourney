@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "EmotionNoteTableCell.h"
+#import "ImageNoteTableCell.h"
 #import "com_FirstViewController.h"
 
 #define kNoteEmotionTag 1
@@ -16,16 +16,14 @@
 #define kColorValueTag  5
 
 
-@implementation EmotionNoteTableCell
+@implementation ImageNoteTableCell
 
 @synthesize buttonShare;
 @synthesize noteEmotion;
-@synthesize noteText;
 @synthesize noteImage;
 @synthesize noteShare;
 @synthesize noteEmotionView;
 @synthesize noteImageView;
-@synthesize noteTextLabel;
 @synthesize viewController;
 @synthesize picView;
 
@@ -76,25 +74,12 @@
       
 
 
-
-
 -(void)setNoteEmotion:(UIImage *)emotion {
     NSLog(@"setNoteEmotion");
     noteEmotion = [emotion copy];
     //noteEmotionView = (UIImageView *)[self.contentView viewWithTag:kNoteEmotionTag];
     noteEmotionView.image = noteEmotion;
     noteEmotionView.contentMode = UIViewContentModeScaleAspectFill;
-}
-
-
-
-- (void)setNoteText:(NSString *)text {
-    NSLog(@"setNoteText");
-    if (![text isEqualToString:noteText]) {
-        noteText = [text copy];
-        //noteTextLabel = (UILabel *)[self.contentView viewWithTag:kNoteTextTag];
-        noteTextLabel.text = noteText; 
-    }
 }
 
 
@@ -119,7 +104,7 @@
 
 -(IBAction)showMailComposer:(id)sender {
     NSLog(@"showMailComposer triggered. Calling showEmailComposer in FirstViewController");
-    [self.viewController showEmailComposerWithText:noteText
+    [self.viewController showEmailComposerWithText:nil
                                        withEmotion:noteEmotion
                                        withPicture:noteImage];
 }

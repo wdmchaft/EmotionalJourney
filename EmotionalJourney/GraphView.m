@@ -10,12 +10,32 @@
 
 @implementation GraphView
 
+//@synthesize gView;
+@synthesize buttonBack;
+@synthesize emotionsHistoryView;
+
+
+-(void) setMoodHistoryData:(NSArray *)moodHistory {
+    NSLog(@"GraphView: setMoodHistoryData");
+    [emotionsHistoryView setMoodHistoryData:moodHistory];
+    //[self.view addSubview:emotionsHistoryView];
+}
+
+
+-(id) init {
+    self = [super init];
+    return self;
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
+    emotionsHistoryView = [[EmotionsHistoryView alloc] init];
+    //sub = [[subviewtest alloc] initWithFrame:self.view.bounds];
     return self;
 }
 
@@ -31,8 +51,12 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"GraphView: viewDidLoad");
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    //emotionsHistoryView = (EmotionsHistoryView *) subviewGraph;
+    [emotionsHistoryView initializeGraph];
+    //[self.view addSubview:sub];
 }
 
 - (void)viewDidUnload

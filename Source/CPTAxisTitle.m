@@ -24,7 +24,7 @@
 		}
 	}
 	else {
-		[self release];
+		// [self release];
 		self = nil;
 	}
 	return self;

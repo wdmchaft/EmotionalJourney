@@ -7,10 +7,16 @@
 //
 
 #import "com_AppDelegate.h"
+#import "com_FirstViewController.h"
+#import "com_SecondViewController.h"
+#import "AwesomeMenu.h"
 
 @implementation com_AppDelegate
 
 @synthesize window = _window;
+@synthesize navController;
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -72,7 +72,7 @@
 -(void)dealloc
 {
 	CGColorSpaceRelease(cgColorSpace);
-	[super dealloc];
+	// [super dealloc];
 }
 
 -(void)finalize

@@ -63,10 +63,12 @@ NSString *const kCPTPlainBlackTheme = @"Plain Black"; ///< Plain black theme.
 	minorLineStyle.lineWidth = 3.0;
 
 	CPTXYAxis *x						= axisSet.xAxis;
-	CPTMutableTextStyle *whiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	// CPTMutableTextStyle *whiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+    CPTMutableTextStyle *whiteTextStyle = [[CPTMutableTextStyle alloc] init];
 	whiteTextStyle.color	= [CPTColor whiteColor];
 	whiteTextStyle.fontSize = 14.0;
-	CPTMutableTextStyle *minorTickWhiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	// CPTMutableTextStyle *minorTickWhiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+    CPTMutableTextStyle *minorTickWhiteTextStyle = [[CPTMutableTextStyle alloc] init];
 	minorTickWhiteTextStyle.color	 = [CPTColor whiteColor];
 	minorTickWhiteTextStyle.fontSize = 12.0;
 

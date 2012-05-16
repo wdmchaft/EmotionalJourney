@@ -78,12 +78,12 @@
 
 -(void)dealloc
 {
-	[lineStyle release];
-	[fill release];
+	// [lineStyle release];
+	// [fill release];
 	CGPathRelease(cachedLineCapPath);
 	CGPathRelease(customLineCapPath);
 
-	[super dealloc];
+	// [super dealloc];
 }
 
 -(void)finalize

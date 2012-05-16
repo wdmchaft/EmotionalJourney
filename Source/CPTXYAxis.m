@@ -79,15 +79,16 @@
 		CPTXYAxis *theLayer = (CPTXYAxis *)layer;
 
 		orthogonalCoordinateDecimal = theLayer->orthogonalCoordinateDecimal;
-		axisConstraints				= [theLayer->axisConstraints retain];
+		// axisConstraints				= [theLayer->axisConstraints retain];
+        axisConstraints				= theLayer->axisConstraints;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[axisConstraints release];
-	[super dealloc];
+	// [axisConstraints release];
+	// [super dealloc];
 }
 
 #pragma mark -
@@ -105,8 +106,9 @@
 {
 	if ( (self = [super initWithCoder:coder]) ) {
 		orthogonalCoordinateDecimal = [coder decodeDecimalForKey:@"CPTXYAxis.orthogonalCoordinateDecimal"];
-		axisConstraints				= [[coder decodeObjectForKey:@"CPTXYAxis.axisConstraints"] retain];
-	}
+		// axisConstraints				= [[coder decodeObjectForKey:@"CPTXYAxis.axisConstraints"] retain];
+     	axisConstraints				= [coder decodeObjectForKey:@"CPTXYAxis.axisConstraints"];
+    }
 	return self;
 }
 

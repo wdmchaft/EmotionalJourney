@@ -184,23 +184,24 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 		// Plot area
 		CPTPlotAreaFrame *newArea = [(CPTPlotAreaFrame *)[CPTPlotAreaFrame alloc] initWithFrame:self.bounds];
 		self.plotAreaFrame = newArea;
-		[newArea release];
+		//[newArea release];
 
 		// Plot spaces
 		plotSpaces = [[NSMutableArray alloc] init];
 		CPTPlotSpace *newPlotSpace = [self newPlotSpace];
 		[self addPlotSpace:newPlotSpace];
-		[newPlotSpace release];
+		//[newPlotSpace release];
 
 		// Axis set
 		CPTAxisSet *newAxisSet = [self newAxisSet];
 		self.axisSet = newAxisSet;
-		[newAxisSet release];
+		//[newAxisSet release];
 
 		// Title
 		title					 = nil;
 		titlePlotAreaFrameAnchor = CPTRectAnchorTop;
-		titleTextStyle			 = [[CPTTextStyle textStyle] retain];
+		// titleTextStyle			 = [[CPTTextStyle textStyle] retain];
+        titleTextStyle			 = [CPTTextStyle textStyle];
 		titleDisplacement		 = CGPointZero;
 		titleAnnotation			 = nil;
 
@@ -222,17 +223,25 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTGraph *theLayer = (CPTGraph *)layer;
 
-		plotAreaFrame			 = [theLayer->plotAreaFrame retain];
-		plots					 = [theLayer->plots retain];
-		plotSpaces				 = [theLayer->plotSpaces retain];
-		title					 = [theLayer->title retain];
+		// plotAreaFrame			 = [theLayer->plotAreaFrame retain];
+		plotAreaFrame			 = theLayer->plotAreaFrame;
+        // plots					 = [theLayer->plots retain];
+		plots					 = theLayer->plots;
+        //plotSpaces				 = [theLayer->plotSpaces retain];
+		//title					 = [theLayer->title retain];
+        plotSpaces				 = theLayer->plotSpaces;
+		title					 = theLayer->title;
 		titlePlotAreaFrameAnchor = theLayer->titlePlotAreaFrameAnchor;
-		titleTextStyle			 = [theLayer->titleTextStyle retain];
+		//titleTextStyle			 = [theLayer->titleTextStyle retain];
+        titleTextStyle			 = theLayer->titleTextStyle;
 		titleDisplacement		 = theLayer->titleDisplacement;
-		titleAnnotation			 = [theLayer->titleAnnotation retain];
-		legend					 = [theLayer->legend retain];
-		legendAnnotation		 = [theLayer->legendAnnotation retain];
-		legendAnchor			 = theLayer->legendAnchor;
+		// titleAnnotation			 = [theLayer->titleAnnotation retain];
+		// legend					 = [theLayer->legend retain];
+		// legendAnnotation		 = [theLayer->legendAnnotation retain];
+        titleAnnotation			 = theLayer->titleAnnotation;
+		legend					 = theLayer->legend;
+		legendAnnotation		 = theLayer->legendAnnotation;
+        legendAnchor			 = theLayer->legendAnchor;
 		legendDisplacement		 = theLayer->legendDisplacement;
 	}
 	return self;
@@ -242,7 +251,7 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 
-	[plotAreaFrame release];
+	/* [plotAreaFrame release];
 	[plots release];
 	[plotSpaces release];
 	[title release];
@@ -252,6 +261,8 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 	[legendAnnotation release];
 
 	[super dealloc];
+     
+     */
 }
 
 #pragma mark -
@@ -278,16 +289,27 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 -(id)initWithCoder:(NSCoder *)coder
 {
 	if ( (self = [super initWithCoder:coder]) ) {
-		plotAreaFrame			 = [[coder decodeObjectForKey:@"CPTGraph.plotAreaFrame"] retain];
+		// plotAreaFrame			 = [[coder decodeObjectForKey:@"CPTGraph.plotAreaFrame"] retain];
+        plotAreaFrame			 = [coder decodeObjectForKey:@"CPTGraph.plotAreaFrame"];
 		plots					 = [[coder decodeObjectForKey:@"CPTGraph.plots"] mutableCopy];
 		plotSpaces				 = [[coder decodeObjectForKey:@"CPTGraph.plotSpaces"] mutableCopy];
 		title					 = [[coder decodeObjectForKey:@"CPTGraph.title"] copy];
 		titleTextStyle			 = [[coder decodeObjectForKey:@"CPTGraph.titleTextStyle"] copy];
 		titlePlotAreaFrameAnchor = [coder decodeIntegerForKey:@"CPTGraph.titlePlotAreaFrameAnchor"];
 		titleDisplacement		 = [coder decodeCPTPointForKey:@"CPTGraph.titleDisplacement"];
-		titleAnnotation			 = [[coder decodeObjectForKey:@"CPTGraph.titleAnnotation"] retain];
-		legend					 = [[coder decodeObjectForKey:@"CPTGraph.legend"] retain];
-		legendAnnotation		 = [[coder decodeObjectForKey:@"CPTGraph.legendAnnotation"] retain];
+		//titleAnnotation			 = [[coder decodeObjectForKey:@"CPTGraph.titleAnnotation"] retain];
+		//legend					 = [[coder decodeObjectForKey:@"CPTGraph.legend"] retain];
+		//legendAnnotation		 = [[coder decodeObjectForKey:@"CPTGraph.legendAnnotation"] retain];
+        //titleAnnotation			 = [[coder decodeObjectForKey:@"CPTGraph.titleAnnotation"] retain];
+		//legend					 = [[coder decodeObjectForKey:@"CPTGraph.legend"] retain];
+        
+        titleAnnotation			 = [coder decodeObjectForKey:@"CPTGraph.titleAnnotation"];
+		legend					 = [coder decodeObjectForKey:@"CPTGraph.legend"];
+		legendAnnotation		 = [coder decodeObjectForKey:@"CPTGraph.legendAnnotation"];
+        titleAnnotation			 = [coder decodeObjectForKey:@"CPTGraph.titleAnnotation"];
+		legend					 = [coder decodeObjectForKey:@"CPTGraph.legend"];
+        
+		legendAnnotation		 = [[coder decodeObjectForKey:@"CPTGraph.legendAnnotation"];
 		legendAnchor			 = [coder decodeIntegerForKey:@"CPTGraph.legendAnchor"];
 		legendDisplacement		 = [coder decodeCPTPointForKey:@"CPTGraph.legendDisplacement"];
 	}
@@ -509,7 +531,7 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 	if ( plotAreaFrame != newArea ) {
 		plotAreaFrame.graph = nil;
 		[plotAreaFrame removeFromSuperlayer];
-		[plotAreaFrame release];
+		// [plotAreaFrame release];
 		plotAreaFrame = [newArea retain];
 		[self addSublayer:newArea];
 		plotAreaFrame.graph = self;
@@ -627,8 +649,9 @@ NSString *const CPTGraphNeedsRedrawNotification = @"CPTGraphNeedsRedrawNotificat
 -(void)setLegend:(CPTLegend *)newLegend
 {
 	if ( newLegend != legend ) {
-		[legend release];
-		legend = [newLegend retain];
+		// [legend release];
+		// legend = [newLegend retain];
+        legend = newLegend;
 		CPTLayerAnnotation *theLegendAnnotation = self.legendAnnotation;
 		if ( legend ) {
 			if ( theLegendAnnotation ) {

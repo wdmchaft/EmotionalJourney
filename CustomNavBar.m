@@ -10,4 +10,13 @@
 
 @implementation CustomNavBar
 
+- (void)drawRect:(CGRect)rect {
+    // Drawing code 
+    UIImage *img = [UIImage imageNamed: @"Texture_RedCanvas.png"];
+    [img drawInRect:CGRectMake(0, 
+                               0, 
+                               self.frame.size.width, 
+                               self.frame.size.height)];
+}
+
 @end

@@ -53,7 +53,7 @@
 	CPTTextLayer *newLayer = [[CPTTextLayer alloc] initWithText:newText style:newStyle];
 
 	self = [self initWithContentLayer:newLayer];
-	[newLayer release];
+	// [newLayer release];
 
 	return self;
 }
@@ -67,7 +67,8 @@
 {
 	if ( layer ) {
 		if ( (self = [super init]) ) {
-			contentLayer = [layer retain];
+			// contentLayer = [layer retain];
+            contentLayer = layer;
 			offset		 = 20.0;
 			rotation	 = 0.0;
 			alignment	 = CPTAlignmentCenter;
@@ -75,7 +76,7 @@
 		}
 	}
 	else {
-		[self release];
+		// [self release];
 		self = nil;
 	}
 	return self;
@@ -83,8 +84,8 @@
 
 -(void)dealloc
 {
-	[contentLayer release];
-	[super dealloc];
+	// [contentLayer release];
+	// [super dealloc];
 }
 
 #pragma mark -
@@ -102,7 +103,8 @@
 -(id)initWithCoder:(NSCoder *)coder
 {
 	if ( (self = [super init]) ) {
-		contentLayer = [[coder decodeObjectForKey:@"CPTAxisLabel.contentLayer"] retain];
+		// contentLayer = [[coder decodeObjectForKey:@"CPTAxisLabel.contentLayer"] retain];
+        contentLayer = [coder decodeObjectForKey:@"CPTAxisLabel.contentLayer"];
 		offset		 = [coder decodeCGFloatForKey:@"CPTAxisLabel.offset"];
 		rotation	 = [coder decodeCGFloatForKey:@"CPTAxisLabel.rotation"];
 		alignment	 = [coder decodeIntegerForKey:@"CPTAxisLabel.alignment"];

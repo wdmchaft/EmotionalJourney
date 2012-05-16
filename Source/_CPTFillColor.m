@@ -33,15 +33,16 @@
 -(id)initWithColor:(CPTColor *)aColor
 {
 	if ( (self = [super init]) ) {
-		fillColor = [aColor retain];
+		// fillColor = [aColor retain];
+        fillColor = aColor;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[fillColor release];
-	[super dealloc];
+	//[fillColor release];
+	//[super dealloc];
 }
 
 #pragma mark -
@@ -98,7 +99,8 @@
 -(id)initWithCoder:(NSCoder *)coder
 {
 	if ( (self = [super init]) ) {
-		fillColor = [[coder decodeObjectForKey:@"_CPTFillColor.fillColor"] retain];
+		// fillColor = [[coder decodeObjectForKey:@"_CPTFillColor.fillColor"] retain];
+        fillColor = [coder decodeObjectForKey:@"_CPTFillColor.fillColor"];
 	}
 	return self;
 }

@@ -72,9 +72,9 @@
 -(void)dealloc
 {
 	anchorLayer = nil;
-	[xConstraints release];
-	[yConstraints release];
-	[super dealloc];
+	// [xConstraints release];
+	// [yConstraints release];
+	// [super dealloc];
 }
 
 #pragma mark -

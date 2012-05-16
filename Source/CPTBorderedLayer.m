@@ -61,18 +61,20 @@
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTBorderedLayer *theLayer = (CPTBorderedLayer *)layer;
 
-		borderLineStyle = [theLayer->borderLineStyle retain];
-		fill			= [theLayer->fill retain];
+		// borderLineStyle = [theLayer->borderLineStyle retain];
+		// fill			= [theLayer->fill retain];
+        borderLineStyle = theLayer->borderLineStyle;
+		fill			= theLayer->fill;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[borderLineStyle release];
-	[fill release];
+	// [borderLineStyle release];
+	// [fill release];
 
-	[super dealloc];
+	// [super dealloc];
 }
 
 #pragma mark -
@@ -250,7 +252,7 @@
 			self.outerBorderPath = NULL;
 			self.innerBorderPath = NULL;
 		}
-		[borderLineStyle release];
+		// [borderLineStyle release];
 		borderLineStyle = [newLineStyle copy];
 		[self setNeedsDisplay];
 	}
@@ -259,7 +261,7 @@
 -(void)setFill:(CPTFill *)newFill
 {
 	if ( newFill != fill ) {
-		[fill release];
+		// [fill release];
 		fill = [newFill copy];
 		[self setNeedsDisplay];
 	}

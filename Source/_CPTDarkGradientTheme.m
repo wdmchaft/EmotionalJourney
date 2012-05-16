@@ -101,11 +101,13 @@ NSString *const kCPTDarkGradientTheme = @"Dark Gradients"; ///< Dark gradient th
 	minorLineStyle.lineColor = [CPTColor darkGrayColor];
 	minorLineStyle.lineWidth = 1.0;
 
-	CPTMutableTextStyle *whiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	// CPTMutableTextStyle *whiteTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+    CPTMutableTextStyle *whiteTextStyle = [[CPTMutableTextStyle alloc] init];
 	whiteTextStyle.color	= [CPTColor whiteColor];
 	whiteTextStyle.fontSize = 14.0;
 
-	CPTMutableTextStyle *whiteMinorTickTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+	// CPTMutableTextStyle *whiteMinorTickTextStyle = [[[CPTMutableTextStyle alloc] init] autorelease];
+    CPTMutableTextStyle *whiteMinorTickTextStyle = [[CPTMutableTextStyle alloc] init];
 	whiteMinorTickTextStyle.color	 = [CPTColor whiteColor];
 	whiteMinorTickTextStyle.fontSize = 12.0;
 

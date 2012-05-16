@@ -53,10 +53,15 @@
 									 dataType:(CPTNumericDataType)newDataType
 										shape:(NSArray *)shapeArray
 {
-	return [[[CPTMutableNumericData alloc] initWithData:newData
+	/*
+     return [[[CPTMutableNumericData alloc] initWithData:newData
 											   dataType:newDataType
 												  shape:shapeArray]
 			autorelease];
+    */
+    return [[CPTMutableNumericData alloc] initWithData:newData
+											   dataType:newDataType
+												  shape:shapeArray];
 }
 
 /** @brief Creates and returns a new CPTMutableNumericData instance.

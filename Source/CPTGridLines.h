@@ -9,7 +9,7 @@
 	BOOL major;
 }
 
-@property (nonatomic, readwrite, assign) __cpt_weak CPTAxis *axis;
+@property (nonatomic, readwrite) __cpt_weak CPTAxis *axis;
 @property (nonatomic, readwrite) BOOL major;
 
 @end

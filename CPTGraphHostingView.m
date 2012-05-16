@@ -9,7 +9,7 @@
 ///	@cond
 @interface CPTGraphHostingView()
 
-@property (nonatomic, readwrite, assign) __weak id pinchGestureRecognizer;
+@property (nonatomic, readwrite) __weak id pinchGestureRecognizer;
 
 -(void)updateNotifications;
 -(void)graphNeedsRedraw:(NSNotification *)notification;
@@ -94,8 +94,8 @@
 -(void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[hostedGraph release];
-	[super dealloc];
+	//[hostedGraph release];
+	//[super dealloc];
 }
 
 #pragma mark -
@@ -197,7 +197,7 @@
 			if ( pinchClass ) {
 				pinchGestureRecognizer = [[pinchClass alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
 				[self addGestureRecognizer:pinchGestureRecognizer];
-				[pinchGestureRecognizer release];
+				//[pinchGestureRecognizer release];
 			}
 		}
 		else {
@@ -280,9 +280,10 @@
 	}
 
 	[hostedGraph removeFromSuperlayer];
-	[hostedGraph release];
-	hostedGraph = [newLayer retain];
-
+	//[hostedGraph release];
+	//hostedGraph = [newLayer retain];
+    hostedGraph = newLayer;
+                   
 	// Screen scaling
 	UIScreen *screen = [UIScreen mainScreen];
 	// scale property is available in iOS 4.0 and later

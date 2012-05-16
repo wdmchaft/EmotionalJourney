@@ -8,28 +8,60 @@
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-                <viewController title="First" id="2" customClass="com_FirstViewController" sceneMemberID="viewController">
+                <viewController title="Home" id="2" customClass="com_FirstViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16" customClass="UIControl">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Background_WovenMatTexture.png" id="i5O-pH-0vx">
-                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Backdrop.png" id="Yoa-iv-0lm">
+                                <rect key="frame" x="0.0" y="43" width="320" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lIz-cs-d95">
-                                <rect key="frame" x="6" y="95" width="209" height="31"/>
+                            <view contentMode="scaleToFill" id="aBh-7S-9eC">
+                                <rect key="frame" x="204" y="43" width="116" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="textFieldEditingDone:" destination="2" eventType="editingDidEndOnExit" id="K7t-X4-0Qr"/>
-                                </connections>
-                            </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fkE-Nj-pra">
-                                <rect key="frame" x="0.0" y="134" width="320" height="277"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4ch-1S-PfM">
+                                        <rect key="frame" x="15" y="31" width="86" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" image="Button_TextPencil.png">
+                                            <color key="titleColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="9UB-n3-7FQ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="OVF-Ad-pdv">
+                                        <rect key="frame" x="7" y="6" width="27" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="9AK-or-v3R">
+                                        <rect key="frame" x="51" y="68" width="59" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="dyr-Rr-HEI">
+                                        <rect key="frame" x="7" y="40" width="103" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Note.png" id="Epx-PJ-k2m">
+                                        <rect key="frame" x="-59" y="0.0" width="175" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fkE-Nj-pra">
+                                <rect key="frame" x="0.0" y="177" width="320" height="234"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="C11-OL-Rlx">
@@ -47,119 +79,166 @@
                                     <outlet property="delegate" destination="2" id="Gaz-C1-Ke7"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wcA-0B-Q0D">
-                                <rect key="frame" x="121" y="58" width="27" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="SmileyHappy.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bpj-Ou-a91">
-                                <rect key="frame" x="17" y="58" width="27" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="SmileyHappy.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="39n-b7-iPt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WG3-zN-6yU">
-                                <rect key="frame" x="68" y="58" width="26" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="SmileySad.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="DLG-4d-LCR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vaf-Hd-Tsd">
-                                <rect key="frame" x="171" y="58" width="27" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="SmileyHappy.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eGZ-bq-2Dz">
-                                <rect key="frame" x="223" y="58" width="27" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="SmileyHappy.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yDG-JO-9Nc">
-                                <rect key="frame" x="274" y="58" width="27" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="SmileyHappy.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4ch-1S-PfM">
-                                <rect key="frame" x="226" y="92" width="89" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" backgroundImage="ButtonGreen-PenThis.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="9UB-n3-7FQ"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="K8b-Xt-Cgw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <navigationBar contentMode="scaleToFill" id="K8b-Xt-Cgw" customClass="CustomNavBar">
+                                <rect key="frame" x="0.0" y="-1" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="rZj-sJ-YeJ"/>
+                                    <navigationItem title="My Emotions' Journal" id="rZj-sJ-YeJ">
+                                        <barButtonItem key="rightBarButtonItem" image="Button_History.png" style="plain" id="hCx-eY-9KE">
+                                            <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="history:" destination="2" id="sjh-1h-QiO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <connections>
+                                            <outlet property="rightBarButtonItem" destination="hCx-eY-9KE" id="kXh-7t-TDc"/>
+                                        </connections>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do you feel now?" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="lIz-cs-d95">
+                                <rect key="frame" x="6" y="136" width="147" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textBeingEntered:" destination="2" eventType="editingChanged" id="fH4-ZU-GOh"/>
+                                    <action selector="textFieldEditingDone:" destination="2" eventType="editingDidEndOnExit" id="K7t-X4-0Qr"/>
+                                </connections>
+                            </textField>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" id="zeS-8W-YbP">
+                                <rect key="frame" x="0.0" y="43" width="61" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ri2-d6-eRg">
+                                        <rect key="frame" x="8" y="11" width="44" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="1.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="R3F-t9-gKX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="At2-mW-8Bv">
+                                        <rect key="frame" x="4" y="77" width="52" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="4.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="mZv-nR-2eH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JOo-6M-Thq">
+                                        <rect key="frame" x="8" y="137" width="45" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="8.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="nTd-ix-NCn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HTV-Kn-aVF">
+                                        <rect key="frame" x="0.0" y="207" width="54" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="2.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="bmP-jd-W1R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xT4-u0-gDZ">
+                                        <rect key="frame" x="3" y="264" width="51" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="20.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="zcI-wf-mji"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ezg-N1-Uqa">
+                                        <rect key="frame" x="-1" y="325" width="54" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="15.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emotionExpressed:" destination="2" eventType="touchUpInside" id="VOG-Wk-Vrl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gmx-DX-cqW">
+                                <rect key="frame" x="156" y="136" width="29" height="30.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title=">">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="textFieldEditingDone:" destination="2" eventType="touchUpInside" id="el4-N3-IXz"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <action selector="backgroundTapped:" destination="2" eventType="touchDown" id="kIw-Zh-rzg"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="first" id="7"/>
                     <connections>
-                        <outlet property="buttonEmotionHappy" destination="bpj-Ou-a91" id="bnd-T4-4jQ"/>
-                        <outlet property="buttonEmotionSad" destination="WG3-zN-6yU" id="Uet-N0-Wom"/>
+                        <outlet property="buttonEmotionAngry" destination="ezg-N1-Uqa" id="0YY-z9-ZfO"/>
+                        <outlet property="buttonEmotionDepressed" destination="xT4-u0-gDZ" id="Cje-fW-I0P"/>
+                        <outlet property="buttonEmotionHappy" destination="Ri2-d6-eRg" id="CQn-4a-12C"/>
+                        <outlet property="buttonEmotionOverjoyed" destination="At2-mW-8Bv" id="TMd-Ik-L9V"/>
+                        <outlet property="buttonEmotionRomantic" destination="JOo-6M-Thq" id="t5c-Zx-1Oh"/>
+                        <outlet property="buttonEmotionSad" destination="HTV-Kn-aVF" id="xBT-em-zYE"/>
                         <outlet property="buttonPenThis" destination="4ch-1S-PfM" id="Ezh-lS-syT"/>
+                        <outlet property="buttonSaveText" destination="gmx-DX-cqW" id="qnO-W7-ww5"/>
+                        <outlet property="emoticonNoteLive" destination="OVF-Ad-pdv" id="GX9-Zl-WpO"/>
+                        <outlet property="emoticonsView" destination="zeS-8W-YbP" id="Ikc-fG-izG"/>
                         <outlet property="table" destination="fkE-Nj-pra" id="Fwr-Tp-HUE"/>
                         <outlet property="textFieldUserInput" destination="lIz-cs-d95" id="1X5-BI-9Ks"/>
+                        <outlet property="textNoteLive" destination="dyr-Rr-HEI" id="61f-zQ-Gzn"/>
                     </connections>
                 </viewController>
             </objects>
@@ -168,29 +247,124 @@
         <scene sceneID="13">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
-                <viewController title="Second" id="3" customClass="com_SecondViewController" sceneMemberID="viewController">
+                <viewController title="History" id="3" customClass="com_SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="22">
-                                <rect key="frame" x="54" y="98" width="212" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Backdrop_Grainer.png" id="P9w-DP-RVj">
+                                <rect key="frame" x="-1" y="44" width="321" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the second view controller — an instance of com_SecondViewController — specified in the app delegate." textAlignment="center" id="23">
                                 <rect key="frame" x="20" y="181" width="280" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose the 'FROM' date for Mood History" lineBreakMode="tailTruncation" minimumFontSize="10" id="XtQ-HO-Pwo">
+                                <rect key="frame" x="27" y="49" width="265" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <datePicker opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="XgO-dR-CNG">
+                                <rect key="frame" x="-1" y="75" width="321" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="357885821.13287801">
+                                    <!--2012-05-05 04:43:41 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                                <connections>
+                                    <action selector="dateBeingChosen:" destination="3" eventType="valueChanged" id="hgb-NV-4W0"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jC6-XL-M3m">
+                                <rect key="frame" x="-1" y="291" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="I've chosen the 'FROM' date">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fromDateChosen:" destination="3" eventType="touchUpInside" id="7Dp-1p-lR8"/>
+                                    <action selector="toDateChosen:" destination="3" eventType="touchUpInside" id="HMG-mV-jo3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="From" lineBreakMode="tailTruncation" minimumFontSize="10" id="3bo-rq-Lyl">
+                                <rect key="frame" x="20" y="336" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To" lineBreakMode="tailTruncation" minimumFontSize="10" id="Itz-lH-Hm3">
+                                <rect key="frame" x="20" y="370" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="b7T-No-yxl">
+                                <rect key="frame" x="98" y="336" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="hvr-bD-Wp3">
+                                <rect key="frame" x="98" y="370" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="Hux-R5-ALx" customClass="CustomNavBar">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="My Emotions' Journal" id="kwN-sL-fyz"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="History" image="second" id="6"/>
+                    <connections>
+                        <outlet property="buttonDateChosen" destination="jC6-XL-M3m" id="jKr-k4-37x"/>
+                        <outlet property="datePicker" destination="XgO-dR-CNG" id="YmX-Dm-4fY"/>
+                        <outlet property="labelFromDate" destination="b7T-No-yxl" id="yn0-fA-rAS"/>
+                        <outlet property="labelInputPrompt" destination="XtQ-HO-Pwo" id="1Mv-7a-w9b"/>
+                        <outlet property="labelToDate" destination="hvr-bD-Wp3" id="hTX-l1-XTr"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
@@ -198,7 +372,7 @@
         <scene sceneID="15">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
-                <tabBarController id="4" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" id="4" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -215,14 +389,30 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background_WovenMatTexture.png" width="936" height="723"/>
-        <image name="ButtonGreen-PenThis.png" width="276" height="114"/>
-        <image name="SmileyHappy.png" width="105" height="106"/>
-        <image name="SmileySad.png" width="106" height="107"/>
+        <image name="1.png" width="18" height="18"/>
+        <image name="15.png" width="18" height="18"/>
+        <image name="2.png" width="18" height="18"/>
+        <image name="20.png" width="18" height="18"/>
+        <image name="4.png" width="18" height="18"/>
+        <image name="8.png" width="18" height="18"/>
+        <image name="Backdrop.png" width="640" height="480"/>
+        <image name="Backdrop_Grainer.png" width="800" height="600"/>
+        <image name="Button_History.png" width="44" height="50"/>
+        <image name="Button_TextPencil.png" width="44" height="44"/>
+        <image name="Note.png" width="551" height="399"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="AwesomeMenu" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AwesomeMenu.h"/>
+        </class>
+        <class className="AwesomeMenuItem" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AwesomeMenuItem.h"/>
+        </class>
+        <class className="CustomNavBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomNavBar.h"/>
+        </class>
         <class className="NSDictionary" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSDictionary.h"/>
         </class>
@@ -235,22 +425,46 @@
                 <relationship kind="action" name="backgroundTapped:"/>
                 <relationship kind="action" name="buttonPressed:"/>
                 <relationship kind="action" name="emotionExpressed:"/>
+                <relationship kind="action" name="history:"/>
+                <relationship kind="action" name="saveThisText:"/>
+                <relationship kind="action" name="textBeingEntered:"/>
                 <relationship kind="action" name="textFieldEditingDone:"/>
                 <relationship kind="outlet" name="arrayInput" candidateClass="NSArray"/>
-                <relationship kind="outlet" name="buttonEmotionCry" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="awesomeMenu" candidateClass="AwesomeMenu"/>
+                <relationship kind="outlet" name="buttonEmotionAngry" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonEmotionDepressed" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonEmotionHappy" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="buttonEmotionLaugh" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="buttonEmotionLove" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonEmotionOk" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonEmotionOverjoyed" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonEmotionRomantic" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonEmotionSad" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="buttonEmotionWink" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonPenThis" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonSaveText" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="dictionary" candidateClass="NSMutableDictionary"/>
+                <relationship kind="outlet" name="emoticonNoteLive" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="emoticonsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="imageNoteLive" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="menuItem1" candidateClass="AwesomeMenuItem"/>
+                <relationship kind="outlet" name="menuItem2" candidateClass="AwesomeMenuItem"/>
+                <relationship kind="outlet" name="menuItem3" candidateClass="AwesomeMenuItem"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="textFieldUserInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textNoteLive" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="com_SecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/com_SecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dateBeingChosen:"/>
+                <relationship kind="action" name="fromDateChosen:"/>
+                <relationship kind="action" name="toDateChosen:"/>
+                <relationship kind="outlet" name="buttonDateChosen" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="labelFromDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelInputPrompt" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelToDate" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

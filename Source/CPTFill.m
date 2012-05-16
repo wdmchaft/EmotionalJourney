@@ -24,7 +24,8 @@
  **/
 +(CPTFill *)fillWithColor:(CPTColor *)aColor
 {
-	return [[(_CPTFillColor *)[_CPTFillColor alloc] initWithColor:aColor] autorelease];
+	// return [[(_CPTFillColor *)[_CPTFillColor alloc] initWithColor:aColor] autorelease];
+    return [(_CPTFillColor *)[_CPTFillColor alloc] initWithColor:aColor];
 }
 
 /** @brief Creates and returns a new CPTFill instance initialized with a given gradient.
@@ -33,7 +34,8 @@
  **/
 +(CPTFill *)fillWithGradient:(CPTGradient *)aGradient
 {
-	return [[[_CPTFillGradient alloc] initWithGradient:aGradient] autorelease];
+	// return [[[_CPTFillGradient alloc] initWithGradient:aGradient] autorelease];
+	return [[_CPTFillGradient alloc] initWithGradient:aGradient];
 }
 
 /** @brief Creates and returns a new CPTFill instance initialized with a given image.

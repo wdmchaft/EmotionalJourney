@@ -41,7 +41,8 @@
 -(id)initWithFrame:(CGRect)newFrame
 {
 	if ( (self = [super initWithFrame:newFrame]) ) {
-		axes			= [[NSArray array] retain];
+		//axes			= [[NSArray array] retain];
+        axes			= [NSArray array];
 		borderLineStyle = nil;
 
 		self.needsDisplayOnBoundsChange = YES;
@@ -56,17 +57,19 @@
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTAxisSet *theLayer = (CPTAxisSet *)layer;
 
-		axes			= [theLayer->axes retain];
-		borderLineStyle = [theLayer->borderLineStyle retain];
+		// axes			= [theLayer->axes retain];
+		// borderLineStyle = [theLayer->borderLineStyle retain];
+        axes			= theLayer->axes;
+		borderLineStyle = theLayer->borderLineStyle;
 	}
 	return self;
 }
 
 -(void)dealloc
 {
-	[axes release];
-	[borderLineStyle release];
-	[super dealloc];
+	// [axes release];
+	// [borderLineStyle release];
+	// [super dealloc];
 }
 
 #pragma mark -
@@ -115,8 +118,8 @@
 			[axis removeFromSuperlayer];
 			axis.plotArea = nil;
 		}
-		[newAxes retain];
-		[axes release];
+		// [newAxes retain];
+		// [axes release];
 		axes = newAxes;
 		CPTPlotArea *plotArea = (CPTPlotArea *)self.superlayer;
 		for ( CPTAxis *axis in axes ) {
@@ -131,7 +134,7 @@
 -(void)setBorderLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( newLineStyle != borderLineStyle ) {
-		[borderLineStyle release];
+		// [borderLineStyle release];
 		borderLineStyle = [newLineStyle copy];
 		[self setNeedsDisplay];
 	}

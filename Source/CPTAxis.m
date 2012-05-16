@@ -450,8 +450,10 @@ double niceNum(double x, BOOL round);
 {
 	if ( (self = [super initWithFrame:newFrame]) ) {
 		plotSpace					= nil;
-		majorTickLocations			= [[NSSet set] retain];
-		minorTickLocations			= [[NSSet set] retain];
+		//majorTickLocations			= [[NSSet set] retain];
+		//minorTickLocations			= [[NSSet set] retain];
+        majorTickLocations = [NSSet set];
+        minorTickLocations = [NSSet set];
 		preferredNumberOfMajorTicks = 0;
 		minorTickLength				= 3.0;
 		majorTickLength				= 5.0;
@@ -485,9 +487,11 @@ double niceNum(double x, BOOL round);
 		minorTickLabelFormatter			   = nil;
 		labelFormatterChanged			   = YES;
 		minorLabelFormatterChanged		   = NO;
-		axisLabels						   = [[NSSet set] retain];
-		minorTickAxisLabels				   = [[NSSet set] retain];
-		tickDirection					   = CPTSignNone;
+		//axisLabels						   = [[NSSet set] retain];
+		//minorTickAxisLabels				   = [[NSSet set] retain];
+		axisLabels = [NSSet set];
+        minorTickAxisLabels = [NSSet set];
+        tickDirection					   = CPTSignNone;
 		axisTitle						   = nil;
 		titleTextStyle					   = [[CPTTextStyle alloc] init];
 		titleRotation					   = NAN;
@@ -514,9 +518,14 @@ double niceNum(double x, BOOL round);
 	if ( (self = [super initWithLayer:layer]) ) {
 		CPTAxis *theLayer = (CPTAxis *)layer;
 
-		plotSpace					= [theLayer->plotSpace retain];
-		majorTickLocations			= [theLayer->majorTickLocations retain];
-		minorTickLocations			= [theLayer->minorTickLocations retain];
+		// plotSpace					= [theLayer->plotSpace retain];
+		// majorTickLocations			= [theLayer->majorTickLocations retain];
+		// minorTickLocations			= [theLayer->minorTickLocations retain];
+        
+        plotSpace					= theLayer->plotSpace;
+		majorTickLocations			= theLayer->majorTickLocations;
+		minorTickLocations			= theLayer->minorTickLocations;
+        
 		preferredNumberOfMajorTicks = theLayer->preferredNumberOfMajorTicks;
 		minorTickLength				= theLayer->minorTickLength;
 		majorTickLength				= theLayer->majorTickLength;
@@ -526,8 +535,9 @@ double niceNum(double x, BOOL round);
 		minorTickLabelRotation		= theLayer->labelRotation;
 		labelAlignment				= theLayer->labelAlignment;
 		minorTickLabelAlignment		= theLayer->labelAlignment;
-		title						= [theLayer->title retain];
-		titleOffset					= theLayer->titleOffset;
+        titleOffset					= theLayer->titleOffset;
+
+		/* title						= [theLayer->title retain];
 		axisLineStyle				= [theLayer->axisLineStyle retain];
 		majorTickLineStyle			= [theLayer->majorTickLineStyle retain];
 		minorTickLineStyle			= [theLayer->minorTickLineStyle retain];
@@ -535,12 +545,24 @@ double niceNum(double x, BOOL round);
 		minorGridLineStyle			= [theLayer->minorGridLineStyle retain];
 		axisLineCapMin				= [theLayer->axisLineCapMin retain];
 		axisLineCapMax				= [theLayer->axisLineCapMax retain];
+        */
+        
+        title						= theLayer->title;
+		axisLineStyle				= theLayer->axisLineStyle;
+		majorTickLineStyle			= theLayer->majorTickLineStyle;
+		minorTickLineStyle			= theLayer->minorTickLineStyle;
+		majorGridLineStyle			= theLayer->majorGridLineStyle;
+		minorGridLineStyle			= theLayer->minorGridLineStyle;
+		axisLineCapMin				= theLayer->axisLineCapMin;
+		axisLineCapMax				= theLayer->axisLineCapMax;
+        
 		labelingOrigin				= theLayer->labelingOrigin;
 		majorIntervalLength			= theLayer->majorIntervalLength;
 		minorTicksPerInterval		= theLayer->minorTicksPerInterval;
 		coordinate					= theLayer->coordinate;
 		labelingPolicy				= theLayer->labelingPolicy;
-		labelFormatter				= [theLayer->labelFormatter retain];
+		/*
+         labelFormatter				= [theLayer->labelFormatter retain];
 		minorTickLabelFormatter		= [theLayer->minorTickLabelFormatter retain];
 		axisLabels					= [theLayer->axisLabels retain];
 		minorTickAxisLabels			= [theLayer->minorTickAxisLabels retain];
@@ -549,17 +571,38 @@ double niceNum(double x, BOOL round);
 		minorTickLabelTextStyle		= [theLayer->minorTickLabelTextStyle retain];
 		axisTitle					= [theLayer->axisTitle retain];
 		titleTextStyle				= [theLayer->titleTextStyle retain];
+        */
+        
+        labelFormatter				= theLayer->labelFormatter;
+		minorTickLabelFormatter		= theLayer->minorTickLabelFormatter;
+		axisLabels					= theLayer->axisLabels;
+		minorTickAxisLabels			= theLayer->minorTickAxisLabels;
+		tickDirection				= theLayer->tickDirection;
+		labelTextStyle				= theLayer->labelTextStyle;
+		minorTickLabelTextStyle		= theLayer->minorTickLabelTextStyle;
+		axisTitle					= theLayer->axisTitle;
+		titleTextStyle				= theLayer->titleTextStyle;
+        
+        
 		titleRotation				= theLayer->titleRotation;
 		titleLocation				= theLayer->titleLocation;
 		needsRelabel				= theLayer->needsRelabel;
-		labelExclusionRanges		= [theLayer->labelExclusionRanges retain];
+		// labelExclusionRanges		= [theLayer->labelExclusionRanges retain];
 		plotArea					= theLayer->plotArea;
 		separateLayers				= theLayer->separateLayers;
-		labelShadow					= [theLayer->labelShadow retain];
-		visibleRange				= [theLayer->visibleRange retain];
-		gridLinesRange				= [theLayer->gridLinesRange retain];
-		alternatingBandFills		= [theLayer->alternatingBandFills retain];
-		mutableBackgroundLimitBands = [theLayer->mutableBackgroundLimitBands retain];
+		// labelShadow					= [theLayer->labelShadow retain];
+		// visibleRange				= [theLayer->visibleRange retain];
+		// gridLinesRange				= [theLayer->gridLinesRange retain];
+		// alternatingBandFills		= [theLayer->alternatingBandFills retain];
+		// mutableBackgroundLimitBands = [theLayer->mutableBackgroundLimitBands retain];
+        
+        labelExclusionRanges		= theLayer->labelExclusionRanges;
+		labelShadow					= theLayer->labelShadow;
+		visibleRange				= theLayer->visibleRange;
+		gridLinesRange				= theLayer->gridLinesRange;
+		alternatingBandFills		= theLayer->alternatingBandFills;
+		mutableBackgroundLimitBands = theLayer->mutableBackgroundLimitBands;
+
 		minorGridLines				= theLayer->minorGridLines;
 		majorGridLines				= theLayer->majorGridLines;
 	}
@@ -576,6 +619,7 @@ double niceNum(double x, BOOL round);
 	}
 	[axisTitle.contentLayer removeFromSuperlayer];
 
+    /*
 	[plotSpace release];
 	[majorTickLocations release];
 	[minorTickLocations release];
@@ -603,6 +647,7 @@ double niceNum(double x, BOOL round);
 	[labelShadow release];
 
 	[super dealloc];
+     */
 }
 
 #pragma mark -
@@ -668,9 +713,14 @@ double niceNum(double x, BOOL round);
 {
 	if ( (self = [super initWithCoder:coder]) ) {
 		coordinate					= [coder decodeIntegerForKey:@"CPTAxis.coordinate"];
-		plotSpace					= [[coder decodeObjectForKey:@"CPTAxis.plotSpace"] retain];
-		majorTickLocations			= [[coder decodeObjectForKey:@"CPTAxis.majorTickLocations"] retain];
-		minorTickLocations			= [[coder decodeObjectForKey:@"CPTAxis.minorTickLocations"] retain];
+		// plotSpace					= [[coder decodeObjectForKey:@"CPTAxis.plotSpace"] retain];
+		// majorTickLocations			= [[coder decodeObjectForKey:@"CPTAxis.majorTickLocations"] retain];
+		// minorTickLocations			= [[coder decodeObjectForKey:@"CPTAxis.minorTickLocations"] retain];
+        
+        plotSpace					= [coder decodeObjectForKey:@"CPTAxis.plotSpace"];
+		majorTickLocations			= [coder decodeObjectForKey:@"CPTAxis.majorTickLocations"];
+		minorTickLocations			= [coder decodeObjectForKey:@"CPTAxis.minorTickLocations"];
+        
 		majorTickLength				= [coder decodeCGFloatForKey:@"CPTAxis.majorTickLength"];
 		minorTickLength				= [coder decodeCGFloatForKey:@"CPTAxis.minorTickLength"];
 		labelOffset					= [coder decodeCGFloatForKey:@"CPTAxis.labelOffset"];
@@ -694,26 +744,38 @@ double niceNum(double x, BOOL round);
 		labelTextStyle				= [[coder decodeObjectForKey:@"CPTAxis.labelTextStyle"] copy];
 		minorTickLabelTextStyle		= [[coder decodeObjectForKey:@"CPTAxis.minorTickLabelTextStyle"] copy];
 		titleTextStyle				= [[coder decodeObjectForKey:@"CPTAxis.titleTextStyle"] copy];
-		labelFormatter				= [[coder decodeObjectForKey:@"CPTAxis.labelFormatter"] retain];
-		minorTickLabelFormatter		= [[coder decodeObjectForKey:@"CPTAxis.minorTickLabelFormatter"] retain];
-		labelFormatterChanged		= [coder decodeBoolForKey:@"CPTAxis.labelFormatterChanged"];
+		// labelFormatter				= [[coder decodeObjectForKey:@"CPTAxis.labelFormatter"] retain];
+		// minorTickLabelFormatter		= [[coder decodeObjectForKey:@"CPTAxis.minorTickLabelFormatter"] retain];
+		labelFormatter				= [coder decodeObjectForKey:@"CPTAxis.labelFormatter"];
+		minorTickLabelFormatter		= [coder decodeObjectForKey:@"CPTAxis.minorTickLabelFormatter"];
+        labelFormatterChanged		= [coder decodeBoolForKey:@"CPTAxis.labelFormatterChanged"];
 		minorLabelFormatterChanged	= [coder decodeBoolForKey:@"CPTAxis.minorLabelFormatterChanged"];
-		axisLabels					= [[coder decodeObjectForKey:@"CPTAxis.axisLabels"] retain];
-		minorTickAxisLabels			= [[coder decodeObjectForKey:@"CPTAxis.minorTickAxisLabels"] retain];
-		axisTitle					= [[coder decodeObjectForKey:@"CPTAxis.axisTitle"] retain];
-		title						= [[coder decodeObjectForKey:@"CPTAxis.title"] copy];
+		// axisLabels					= [[coder decodeObjectForKey:@"CPTAxis.axisLabels"] retain];
+		// minorTickAxisLabels			= [[coder decodeObjectForKey:@"CPTAxis.minorTickAxisLabels"] retain];
+		// axisTitle					= [[coder decodeObjectForKey:@"CPTAxis.axisTitle"] retain];
+		
+        // axisLabels					= [[coder decodeObjectForKey:@"CPTAxis.axisLabels"] retain];
+		// minorTickAxisLabels			= [[coder decodeObjectForKey:@"CPTAxis.minorTickAxisLabels"] retain];
+		// axisTitle					= [[coder decodeObjectForKey:@"CPTAxis.axisTitle"] retain];
+        axisLabels					= [coder decodeObjectForKey:@"CPTAxis.axisLabels"];
+		minorTickAxisLabels			= [coder decodeObjectForKey:@"CPTAxis.minorTickAxisLabels"];
+        axisTitle					= [coder decodeObjectForKey:@"CPTAxis.axisTitle"];
+        title						= [[coder decodeObjectForKey:@"CPTAxis.title"] copy];
 		titleOffset					= [coder decodeCGFloatForKey:@"CPTAxis.titleOffset"];
 		titleRotation				= [coder decodeCGFloatForKey:@"CPTAxis.titleRotation"];
 		titleLocation				= [coder decodeDecimalForKey:@"CPTAxis.titleLocation"];
 		tickDirection				= [coder decodeIntegerForKey:@"CPTAxis.tickDirection"];
 		needsRelabel				= [coder decodeBoolForKey:@"CPTAxis.needsRelabel"];
-		labelExclusionRanges		= [[coder decodeObjectForKey:@"CPTAxis.labelExclusionRanges"] retain];
+		// labelExclusionRanges		= [[coder decodeObjectForKey:@"CPTAxis.labelExclusionRanges"] retain];
+
+        labelExclusionRanges		= [coder decodeObjectForKey:@"CPTAxis.labelExclusionRanges"];
 		visibleRange				= [[coder decodeObjectForKey:@"CPTAxis.visibleRange"] copy];
 		gridLinesRange				= [[coder decodeObjectForKey:@"CPTAxis.gridLinesRange"] copy];
 		alternatingBandFills		= [[coder decodeObjectForKey:@"CPTAxis.alternatingBandFills"] copy];
 		mutableBackgroundLimitBands = [[coder decodeObjectForKey:@"CPTAxis.mutableBackgroundLimitBands"] mutableCopy];
 		separateLayers				= [coder decodeBoolForKey:@"CPTAxis.separateLayers"];
-		labelShadow					= [[coder decodeObjectForKey:@"CPTAxis.labelShadow"] retain];
+		// labelShadow					= [[coder decodeObjectForKey:@"CPTAxis.labelShadow"] retain];
+        labelShadow					= [coder decodeObjectForKey:@"CPTAxis.labelShadow"];
 		plotArea					= [coder decodeObjectForKey:@"CPTAxis.plotArea"];
 		minorGridLines				= [coder decodeObjectForKey:@"CPTAxis.minorGridLines"];
 		majorGridLines				= [coder decodeObjectForKey:@"CPTAxis.majorGridLines"];
@@ -826,7 +888,7 @@ double niceNum(double x, BOOL round);
 			}
 		}
 
-		[range release];
+		// [range release];
 	}
 
 	*newMajorLocations = majorLocations;
@@ -862,7 +924,7 @@ double niceNum(double x, BOOL round);
 			if ( (range.minLimitDouble <= 0.0) || (range.maxLimitDouble <= 0.0) ) {
 				*newMajorLocations = [NSMutableSet set];
 				*newMinorLocations = [NSMutableSet set];
-				[range release];
+				// [range release];
 				return;
 			}
 			break;
@@ -871,7 +933,7 @@ double niceNum(double x, BOOL round);
 			// unsupported scale type--bail out
 			*newMajorLocations = [NSMutableSet set];
 			*newMinorLocations = [NSMutableSet set];
-			[range release];
+			// [range release];
 			return;
 
 			break;
@@ -1003,7 +1065,7 @@ double niceNum(double x, BOOL round);
 		}
 	}
 
-	[range release];
+	// [range release];
 
 	// Return tick locations sets
 	*newMajorLocations = majorLocations;
@@ -1078,7 +1140,7 @@ double niceNum(double x, BOOL round);
 		}
 	}
 
-	[range release];
+	// [range release];
 
 	*newMajorLocations = majorLocations;
 	*newMinorLocations = minorLocations;
@@ -1161,9 +1223,10 @@ double niceNum(double x, BOOL round)
 				}
 			}
 		}
-		return [filteredLocations autorelease];
-	}
-	else {
+		// return [filteredLocations autorelease];
+        return filteredLocations;
+        
+	} else {
 		return allLocations;
 	}
 }
@@ -1293,7 +1356,8 @@ double niceNum(double x, BOOL round)
 		CPTAxisLabel *oldAxisLabel = [oldAxisLabels member:blankLabel];
 
 		if ( oldAxisLabel ) {
-			newAxisLabel = [oldAxisLabel retain];
+			// newAxisLabel = [oldAxisLabel retain];
+            newAxisLabel = oldAxisLabel;
 		}
 		else {
 			newAxisLabel			  = [[CPTAxisLabel alloc] initWithText:nil textStyle:nil];
@@ -1318,32 +1382,32 @@ double niceNum(double x, BOOL round)
 				[axisLabelGroup insertSublayer:newLabelLayer atIndex:[thePlotArea sublayerIndexForAxis:self layerType:CPTGraphLayerTypeAxisLabels]];
 			}
 
-			[newLabelLayer release];
+			// [newLabelLayer release];
 		}
 
 		lastLayer		 = newAxisLabel.contentLayer;
 		lastLayer.shadow = theShadow;
 
 		[newAxisLabels addObject:newAxisLabel];
-		[newAxisLabel release];
+		// [newAxisLabel release];
 	}
-	[blankLabel release];
+	// [blankLabel release];
 
 	// remove old labels that are not needed any more from the layer hierarchy
 	[oldAxisLabels minusSet:newAxisLabels];
 	for ( CPTAxisLabel *label in oldAxisLabels ) {
 		[label.contentLayer removeFromSuperlayer];
 	}
-	[oldAxisLabels release];
+	// [oldAxisLabels release];
 
 	// do not use accessor because we've already updated the layer hierarchy
 	if ( useMajorAxisLabels ) {
-		[axisLabels release];
+		// [axisLabels release];
 		axisLabels				   = newAxisLabels;
 		self.labelFormatterChanged = NO;
 	}
 	else {
-		[minorTickAxisLabels release];
+		// [minorTickAxisLabels release];
 		minorTickAxisLabels				= newAxisLabels;
 		self.minorLabelFormatterChanged = NO;
 	}
@@ -1432,7 +1496,7 @@ double niceNum(double x, BOOL round)
 			[self updateAxisLabelsAtLocations:self.minorTickLocations
 									  inRange:labeledRange
 						   useMajorAxisLabels:NO];
-			[labeledRange release];
+			// [labeledRange release];
 		}
 		break;
 
@@ -1496,7 +1560,7 @@ double niceNum(double x, BOOL round)
 			}
 		}
 
-		[range release];
+		// [range release];
 	}
 }
 
@@ -1597,8 +1661,8 @@ double niceNum(double x, BOOL round)
 			[label.contentLayer removeFromSuperlayer];
 		}
 
-		[newLabels retain];
-		[axisLabels release];
+		// [newLabels retain];
+		// [axisLabels release];
 		axisLabels = newLabels;
 
 		[self.plotArea updateAxisSetLayersForType:CPTGraphLayerTypeAxisLabels];
@@ -1633,8 +1697,8 @@ double niceNum(double x, BOOL round)
 			[label.contentLayer removeFromSuperlayer];
 		}
 
-		[newLabels retain];
-		[minorTickAxisLabels release];
+		// [newLabels retain];
+		// [minorTickAxisLabels release];
 		minorTickAxisLabels = newLabels;
 		if ( minorTickAxisLabels ) {
 			CPTAxisLabelGroup *axisLabelGroup = self.plotArea.axisLabelGroup;
@@ -1662,7 +1726,7 @@ double niceNum(double x, BOOL round)
 -(void)setLabelTextStyle:(CPTTextStyle *)newStyle
 {
 	if ( newStyle != labelTextStyle ) {
-		[labelTextStyle release];
+		// [labelTextStyle release];
 		labelTextStyle = [newStyle copy];
 
 		Class textLayerClass = [CPTTextLayer class];
@@ -1680,7 +1744,7 @@ double niceNum(double x, BOOL round)
 -(void)setMinorTickLabelTextStyle:(CPTTextStyle *)newStyle
 {
 	if ( newStyle != minorTickLabelTextStyle ) {
-		[minorTickLabelTextStyle release];
+		// [minorTickLabelTextStyle release];
 		minorTickLabelTextStyle = [newStyle copy];
 
 		Class textLayerClass = [CPTTextLayer class];
@@ -1699,9 +1763,10 @@ double niceNum(double x, BOOL round)
 {
 	if ( newTitle != axisTitle ) {
 		[axisTitle.contentLayer removeFromSuperlayer];
-		[axisTitle release];
-		axisTitle = [newTitle retain];
-
+		// [axisTitle release];
+		// axisTitle = [newTitle retain];
+        axisTitle = newTitle;
+             
 		[self.plotArea updateAxisSetLayersForType:CPTGraphLayerTypeAxisTitles];
 
 		if ( axisTitle ) {
@@ -1721,7 +1786,7 @@ double niceNum(double x, BOOL round)
 		CPTAxisTitle *newTitle = [[CPTAxisTitle alloc] initWithText:title textStyle:self.titleTextStyle];
 		newTitle.rotation = self.titleRotation;
 		self.axisTitle	  = newTitle;
-		[newTitle release];
+		// [newTitle release];
 	}
 	return axisTitle;
 }
@@ -1729,7 +1794,7 @@ double niceNum(double x, BOOL round)
 -(void)setTitleTextStyle:(CPTTextStyle *)newStyle
 {
 	if ( newStyle != titleTextStyle ) {
-		[titleTextStyle release];
+		// [titleTextStyle release];
 		titleTextStyle = [newStyle copy];
 
 		CPTLayer *contentLayer = self.axisTitle.contentLayer;
@@ -1766,7 +1831,7 @@ double niceNum(double x, BOOL round)
 -(void)setTitle:(NSString *)newTitle
 {
 	if ( newTitle != title ) {
-		[title release];
+		// [title release];
 		title = [newTitle copy];
 		if ( title == nil ) {
 			self.axisTitle = nil;
@@ -1802,8 +1867,9 @@ double niceNum(double x, BOOL round)
 -(void)setLabelExclusionRanges:(NSArray *)ranges
 {
 	if ( ranges != labelExclusionRanges ) {
-		[labelExclusionRanges release];
-		labelExclusionRanges = [ranges retain];
+		// [labelExclusionRanges release];
+		// labelExclusionRanges = [ranges retain];
+        labelExclusionRanges = ranges;
 		self.needsRelabel	 = YES;
 	}
 }
@@ -1822,8 +1888,9 @@ double niceNum(double x, BOOL round)
 -(void)setMajorTickLocations:(NSSet *)newLocations
 {
 	if ( newLocations != majorTickLocations ) {
-		[majorTickLocations release];
-		majorTickLocations = [newLocations retain];
+		// [majorTickLocations release];
+		// majorTickLocations = [newLocations retain];
+        majorTickLocations = newLocations;
 		if ( self.separateLayers ) {
 			[self.majorGridLines setNeedsDisplay];
 		}
@@ -1838,8 +1905,9 @@ double niceNum(double x, BOOL round)
 -(void)setMinorTickLocations:(NSSet *)newLocations
 {
 	if ( newLocations != majorTickLocations ) {
-		[minorTickLocations release];
-		minorTickLocations = [newLocations retain];
+		// [minorTickLocations release];
+		// minorTickLocations = [newLocations retain];
+        minorTickLocations = newLocations;
 		if ( self.separateLayers ) {
 			[self.minorGridLines setNeedsDisplay];
 		}
@@ -1924,8 +1992,9 @@ double niceNum(double x, BOOL round)
 -(void)setLabelShadow:(CPTShadow *)newLabelShadow
 {
 	if ( newLabelShadow != labelShadow ) {
-		[labelShadow release];
-		labelShadow = [newLabelShadow retain];
+		// [labelShadow release];
+		// labelShadow = [newLabelShadow retain];
+        labelShadow = newLabelShadow;
 		for ( CPTAxisLabel *label in self.axisLabels ) {
 			label.contentLayer.shadow = labelShadow;
 		}
@@ -1935,8 +2004,9 @@ double niceNum(double x, BOOL round)
 -(void)setPlotSpace:(CPTPlotSpace *)newSpace
 {
 	if ( newSpace != plotSpace ) {
-		[plotSpace release];
-		plotSpace		  = [newSpace retain];
+		// [plotSpace release];
+		// plotSpace		  = [newSpace retain];
+        plotSpace		  = newSpace;
 		self.needsRelabel = YES;
 	}
 }
@@ -1952,7 +2022,7 @@ double niceNum(double x, BOOL round)
 -(void)setAxisLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( newLineStyle != axisLineStyle ) {
-		[axisLineStyle release];
+		// [axisLineStyle release];
 		axisLineStyle = [newLineStyle copy];
 		[self setNeedsDisplay];
 	}
@@ -1961,7 +2031,7 @@ double niceNum(double x, BOOL round)
 -(void)setMajorTickLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( newLineStyle != majorTickLineStyle ) {
-		[majorTickLineStyle release];
+		// [majorTickLineStyle release];
 		majorTickLineStyle = [newLineStyle copy];
 		[self setNeedsDisplay];
 	}
@@ -1970,7 +2040,7 @@ double niceNum(double x, BOOL round)
 -(void)setMinorTickLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( newLineStyle != minorTickLineStyle ) {
-		[minorTickLineStyle release];
+		// [minorTickLineStyle release];
 		minorTickLineStyle = [newLineStyle copy];
 		[self setNeedsDisplay];
 	}
@@ -1979,7 +2049,7 @@ double niceNum(double x, BOOL round)
 -(void)setMajorGridLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( newLineStyle != majorGridLineStyle ) {
-		[majorGridLineStyle release];
+		// [majorGridLineStyle release];
 		majorGridLineStyle = [newLineStyle copy];
 
 		[self.plotArea updateAxisSetLayersForType:CPTGraphLayerTypeMajorGridLines];
@@ -1989,7 +2059,7 @@ double niceNum(double x, BOOL round)
 				if ( !self.majorGridLines ) {
 					CPTGridLines *gridLines = [[CPTGridLines alloc] init];
 					self.majorGridLines = gridLines;
-					[gridLines release];
+					// [gridLines release];
 				}
 				else {
 					[self.majorGridLines setNeedsDisplay];
@@ -2008,7 +2078,7 @@ double niceNum(double x, BOOL round)
 -(void)setMinorGridLineStyle:(CPTLineStyle *)newLineStyle
 {
 	if ( newLineStyle != minorGridLineStyle ) {
-		[minorGridLineStyle release];
+		// [minorGridLineStyle release];
 		minorGridLineStyle = [newLineStyle copy];
 
 		[self.plotArea updateAxisSetLayersForType:CPTGraphLayerTypeMinorGridLines];
@@ -2018,7 +2088,7 @@ double niceNum(double x, BOOL round)
 				if ( !self.minorGridLines ) {
 					CPTGridLines *gridLines = [[CPTGridLines alloc] init];
 					self.minorGridLines = gridLines;
-					[gridLines release];
+					// [gridLines release];
 				}
 				else {
 					[self.minorGridLines setNeedsDisplay];
@@ -2037,7 +2107,7 @@ double niceNum(double x, BOOL round)
 -(void)setAxisLineCapMin:(CPTLineCap *)newAxisLineCapMin
 {
 	if ( newAxisLineCapMin != axisLineCapMin ) {
-		[axisLineCapMin release];
+		//[axisLineCapMin release];
 		axisLineCapMin = [newAxisLineCapMin copy];
 		[self setNeedsDisplay];
 	}
@@ -2046,7 +2116,7 @@ double niceNum(double x, BOOL round)
 -(void)setAxisLineCapMax:(CPTLineCap *)newAxisLineCapMax
 {
 	if ( newAxisLineCapMax != axisLineCapMax ) {
-		[axisLineCapMax release];
+		//[axisLineCapMax release];
 		axisLineCapMax = [newAxisLineCapMax copy];
 		[self setNeedsDisplay];
 	}
@@ -2099,8 +2169,9 @@ double niceNum(double x, BOOL round)
 -(void)setLabelFormatter:(NSNumberFormatter *)newTickLabelFormatter
 {
 	if ( newTickLabelFormatter != labelFormatter ) {
-		[labelFormatter release];
-		labelFormatter			   = [newTickLabelFormatter retain];
+		//[labelFormatter release];
+		// labelFormatter			   = [newTickLabelFormatter retain];
+        labelFormatter			   = newTickLabelFormatter;
 		self.labelFormatterChanged = YES;
 		self.needsRelabel		   = YES;
 	}
@@ -2109,14 +2180,16 @@ double niceNum(double x, BOOL round)
 -(void)setMinorTickLabelFormatter:(NSNumberFormatter *)newMinorTickLabelFormatter
 {
 	if ( newMinorTickLabelFormatter != minorTickLabelFormatter ) {
-		[minorTickLabelFormatter release];
-		minorTickLabelFormatter = [newMinorTickLabelFormatter retain];
+		// [minorTickLabelFormatter release];
+		// minorTickLabelFormatter = [newMinorTickLabelFormatter retain];
+        minorTickLabelFormatter = newMinorTickLabelFormatter;
 		if ( !newMinorTickLabelFormatter ) {
 			for ( CPTAxisLabel *label in self.minorTickAxisLabels ) {
 				[label.contentLayer removeFromSuperlayer];
 			}
-			[minorTickAxisLabels release];
-			minorTickAxisLabels = [[NSSet set] retain];
+			// [minorTickAxisLabels release];
+			//minorTickAxisLabels = [[NSSet set] retain];
+            minorTickAxisLabels = [NSSet set];
 		}
 		self.minorLabelFormatterChanged = YES;
 		self.needsRelabel				= YES;
@@ -2134,7 +2207,7 @@ double niceNum(double x, BOOL round)
 -(void)setGridLinesRange:(CPTPlotRange *)newRange
 {
 	if ( newRange != gridLinesRange ) {
-		[gridLinesRange release];
+		// [gridLinesRange release];
 		gridLinesRange = [newRange copy];
 		if ( self.separateLayers ) {
 			[self.minorGridLines setNeedsDisplay];
@@ -2231,7 +2304,7 @@ double niceNum(double x, BOOL round)
 -(void)setVisibleRange:(CPTPlotRange *)newRange
 {
 	if ( newRange != visibleRange ) {
-		[visibleRange release];
+		// [visibleRange release];
 		visibleRange	  = [newRange copy];
 		self.needsRelabel = YES;
 	}
@@ -2245,12 +2318,12 @@ double niceNum(double x, BOOL round)
 			if ( self.minorGridLineStyle ) {
 				CPTGridLines *gridLines = [[CPTGridLines alloc] init];
 				self.minorGridLines = gridLines;
-				[gridLines release];
+				// [gridLines release];
 			}
 			if ( self.majorGridLineStyle ) {
 				CPTGridLines *gridLines = [[CPTGridLines alloc] init];
 				self.majorGridLines = gridLines;
-				[gridLines release];
+				// [gridLines release];
 			}
 		}
 		else {
@@ -2295,7 +2368,7 @@ double niceNum(double x, BOOL round)
 -(void)setAlternatingBandFills:(NSArray *)newFills
 {
 	if ( newFills != alternatingBandFills ) {
-		[alternatingBandFills release];
+		// [alternatingBandFills release];
 
 		BOOL convertFills = NO;
 		for ( id obj in newFills ) {
@@ -2338,7 +2411,7 @@ double niceNum(double x, BOOL round)
 				}
 
 				[fillArray replaceObjectAtIndex:i withObject:newFill];
-				[newFill release];
+				// [newFill release];
 			}
 
 			alternatingBandFills = fillArray;
@@ -2352,7 +2425,8 @@ double niceNum(double x, BOOL round)
 
 -(NSArray *)backgroundLimitBands
 {
-	return [[self.mutableBackgroundLimitBands copy] autorelease];
+    return [self.mutableBackgroundLimitBands copy];
+	// return [[self.mutableBackgroundLimitBands copy] autorelease];
 }
 
 -(CPTAxisSet *)axisSet
